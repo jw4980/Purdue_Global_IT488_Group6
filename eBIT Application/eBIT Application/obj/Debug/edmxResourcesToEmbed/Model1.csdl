@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="eBITModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="inventory">
+    <Key>
+      <PropertyRef Name="item_id" />
+    </Key>
+    <Property Name="item_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="item_desc" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="item_quantity" Type="Int32" Nullable="false" />
+    <Property Name="category_id" Type="Int32" Nullable="false" />
+    <Property Name="list_price" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="item_cost" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="item_image" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="sale_start" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="sale_end" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="order">
+    <Key>
+      <PropertyRef Name="order_id" />
+    </Key>
+    <Property Name="order_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="customer_id" Type="Int32" Nullable="false" />
+    <Property Name="sale_price" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="order_quantity" Type="Int32" Nullable="false" />
+    <Property Name="tax" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="ship_cost" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="order_total" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="tracking" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="product_category">
+    <Key>
+      <PropertyRef Name="category_id" />
+    </Key>
+    <Property Name="category_id" Type="Int32" Nullable="false" />
+    <Property Name="category_desc" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="eBITEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="inventories" EntityType="Self.inventory" />
+    <EntitySet Name="orders" EntityType="Self.order" />
+    <EntitySet Name="product_category" EntityType="Self.product_category" />
+  </EntityContainer>
+</Schema>
