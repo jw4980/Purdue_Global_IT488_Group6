@@ -16,7 +16,7 @@ namespace eBIT_Application
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new AddInventory());
+            Application.Run(new formProduct());
         }
     }
 }

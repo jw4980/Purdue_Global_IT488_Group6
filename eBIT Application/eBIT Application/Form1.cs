@@ -30,5 +30,10 @@ namespace eBIT_Application
             if (result > 0)
                 MessageBox.Show("Data has been entered successfully");
         }
+
+        private void category_idTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
