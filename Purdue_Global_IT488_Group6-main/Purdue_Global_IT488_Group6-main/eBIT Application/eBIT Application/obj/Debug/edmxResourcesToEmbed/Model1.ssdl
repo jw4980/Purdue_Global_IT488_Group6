@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="eBITModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="inventory">
+    <Key>
+      <PropertyRef Name="item_id" />
+    </Key>
+    <Property Name="item_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="item_desc" Type="text" />
+    <Property Name="item_quantity" Type="int" Nullable="false" />
+    <Property Name="category_id" Type="int" Nullable="false" />
+    <Property Name="list_price" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="item_cost" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="item_image" Type="image" />
+    <Property Name="sale_start" Type="datetime" Nullable="false" />
+    <Property Name="sale_end" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="orders">
+    <Key>
+      <PropertyRef Name="order_id" />
+    </Key>
+    <Property Name="order_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="customer_id" Type="int" Nullable="false" />
+    <Property Name="sale_price" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="order_quantity" Type="int" Nullable="false" />
+    <Property Name="tax" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="ship_cost" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="order_total" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="tracking" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="product_category">
+    <Key>
+      <PropertyRef Name="category_id" />
+    </Key>
+    <Property Name="category_id" Type="int" Nullable="false" />
+    <Property Name="category_desc" Type="text" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="eBITModelStoreContainer">
+    <EntitySet Name="inventory" EntityType="Self.inventory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="orders" EntityType="Self.orders" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="product_category" EntityType="Self.product_category" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
