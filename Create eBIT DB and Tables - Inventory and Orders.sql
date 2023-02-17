@@ -20,6 +20,7 @@ create table inventory (
 -- Table: Product Category
 create table product_category (
 	category_id int not null,
+	category_name varchar(255) not null,
 	category_desc text  not null,
 	primary key (category_id)
 );
