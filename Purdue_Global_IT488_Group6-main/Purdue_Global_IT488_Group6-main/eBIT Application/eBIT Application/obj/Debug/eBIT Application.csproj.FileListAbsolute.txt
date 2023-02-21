@@ -1,0 +1,37 @@
+C:\Users\daish\source\repos\eBIT Application\eBIT Application\bin\Debug\eBIT.mdf
+C:\Users\daish\source\repos\eBIT Application\eBIT Application\bin\Debug\eBIT_log.ldf
+C:\Users\daish\source\repos\eBIT Application\eBIT Application\bin\Debug\EntityFramework.dll
+C:\Users\daish\source\repos\eBIT Application\eBIT Application\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\daish\source\repos\eBIT Application\eBIT Application\bin\Debug\EntityFramework.xml
+C:\Users\daish\source\repos\eBIT Application\eBIT Application\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\daish\source\repos\eBIT Application\eBIT Application\obj\Debug\eBIT Application.csproj.AssemblyReference.cache
+C:\Users\daish\source\repos\eBIT Application\eBIT Application\obj\Debug\eBIT Application.csproj.SuggestedBindingRedirects.cache
+C:\Users\daish\source\repos\eBIT Application\eBIT Application\obj\Debug\eBIT_Application.Properties.Resources.resources
+C:\Users\daish\source\repos\eBIT Application\eBIT Application\obj\Debug\eBIT Application.csproj.GenerateResource.cache
+C:\Users\daish\source\repos\eBIT Application\eBIT Application\obj\Debug\eBIT Application.csproj.CoreCompileInputs.cache
+C:\Users\daish\source\repos\eBIT Application\eBIT Application\obj\Debug\eBIT Application.csproj.CopyComplete
+C:\Users\daish\source\repos\eBIT Application\eBIT Application\obj\Debug\eBIT Application.exe
+C:\Users\daish\source\repos\eBIT Application\eBIT Application\obj\Debug\eBIT Application.pdb
+C:\Users\daish\source\repos\eBIT Application\eBIT Application\bin\Debug\eBIT Application.exe.config
+C:\Users\daish\source\repos\eBIT Application\eBIT Application\bin\Debug\eBIT Application.exe
+C:\Users\daish\source\repos\eBIT Application\eBIT Application\bin\Debug\eBIT Application.pdb
+C:\Users\daish\source\repos\eBIT Application\eBIT Application\obj\Debug\eBIT_Application.AddInventory.resources
+C:\Users\daish\Downloads\Purdue_Global_IT488_Group6-main\Purdue_Global_IT488_Group6-main\eBIT Application\eBIT Application\bin\Debug\eBIT.mdf
+C:\Users\daish\Downloads\Purdue_Global_IT488_Group6-main\Purdue_Global_IT488_Group6-main\eBIT Application\eBIT Application\bin\Debug\eBIT_log.ldf
+C:\Users\daish\Downloads\Purdue_Global_IT488_Group6-main\Purdue_Global_IT488_Group6-main\eBIT Application\eBIT Application\bin\Debug\eBIT Application.exe.config
+C:\Users\daish\Downloads\Purdue_Global_IT488_Group6-main\Purdue_Global_IT488_Group6-main\eBIT Application\eBIT Application\bin\Debug\eBIT Application.exe
+C:\Users\daish\Downloads\Purdue_Global_IT488_Group6-main\Purdue_Global_IT488_Group6-main\eBIT Application\eBIT Application\bin\Debug\eBIT Application.pdb
+C:\Users\daish\Downloads\Purdue_Global_IT488_Group6-main\Purdue_Global_IT488_Group6-main\eBIT Application\eBIT Application\bin\Debug\EntityFramework.dll
+C:\Users\daish\Downloads\Purdue_Global_IT488_Group6-main\Purdue_Global_IT488_Group6-main\eBIT Application\eBIT Application\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\daish\Downloads\Purdue_Global_IT488_Group6-main\Purdue_Global_IT488_Group6-main\eBIT Application\eBIT Application\bin\Debug\EntityFramework.xml
+C:\Users\daish\Downloads\Purdue_Global_IT488_Group6-main\Purdue_Global_IT488_Group6-main\eBIT Application\eBIT Application\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\daish\Downloads\Purdue_Global_IT488_Group6-main\Purdue_Global_IT488_Group6-main\eBIT Application\eBIT Application\obj\Debug\eBIT Application.csproj.AssemblyReference.cache
+C:\Users\daish\Downloads\Purdue_Global_IT488_Group6-main\Purdue_Global_IT488_Group6-main\eBIT Application\eBIT Application\obj\Debug\eBIT Application.csproj.SuggestedBindingRedirects.cache
+C:\Users\daish\Downloads\Purdue_Global_IT488_Group6-main\Purdue_Global_IT488_Group6-main\eBIT Application\eBIT Application\obj\Debug\eBIT_Application.AddInventory.resources
+C:\Users\daish\Downloads\Purdue_Global_IT488_Group6-main\Purdue_Global_IT488_Group6-main\eBIT Application\eBIT Application\obj\Debug\eBIT_Application.AddSale.resources
+C:\Users\daish\Downloads\Purdue_Global_IT488_Group6-main\Purdue_Global_IT488_Group6-main\eBIT Application\eBIT Application\obj\Debug\eBIT_Application.Properties.Resources.resources
+C:\Users\daish\Downloads\Purdue_Global_IT488_Group6-main\Purdue_Global_IT488_Group6-main\eBIT Application\eBIT Application\obj\Debug\eBIT Application.csproj.GenerateResource.cache
+C:\Users\daish\Downloads\Purdue_Global_IT488_Group6-main\Purdue_Global_IT488_Group6-main\eBIT Application\eBIT Application\obj\Debug\eBIT Application.csproj.CoreCompileInputs.cache
+C:\Users\daish\Downloads\Purdue_Global_IT488_Group6-main\Purdue_Global_IT488_Group6-main\eBIT Application\eBIT Application\obj\Debug\eBIT Application.csproj.CopyComplete
+C:\Users\daish\Downloads\Purdue_Global_IT488_Group6-main\Purdue_Global_IT488_Group6-main\eBIT Application\eBIT Application\obj\Debug\eBIT Application.exe
+C:\Users\daish\Downloads\Purdue_Global_IT488_Group6-main\Purdue_Global_IT488_Group6-main\eBIT Application\eBIT Application\obj\Debug\eBIT Application.pdb
