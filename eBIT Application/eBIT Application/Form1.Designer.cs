@@ -38,7 +38,6 @@
             System.Windows.Forms.Label list_priceLabel;
             System.Windows.Forms.Label sale_endLabel;
             System.Windows.Forms.Label sale_startLabel;
-            this.inventoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.category_idTextBox = new System.Windows.Forms.TextBox();
             this.item_costTextBox = new System.Windows.Forms.TextBox();
             this.item_descTextBox = new System.Windows.Forms.TextBox();
@@ -50,6 +49,7 @@
             this.sale_startDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.labelTitle = new System.Windows.Forms.Label();
             this.buttonAdd = new System.Windows.Forms.Button();
+            this.inventoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
             category_idLabel = new System.Windows.Forms.Label();
             item_costLabel = new System.Windows.Forms.Label();
             item_descLabel = new System.Windows.Forms.Label();
@@ -143,10 +143,6 @@
             sale_startLabel.TabIndex = 17;
             sale_startLabel.Text = "sale start:";
             // 
-            // inventoryBindingSource
-            // 
-            this.inventoryBindingSource.DataSource = typeof(eBIT_Application.inventory);
-            // 
             // category_idTextBox
             // 
             this.category_idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.inventoryBindingSource, "category_id", true));
@@ -239,6 +235,10 @@
             this.buttonAdd.Text = "Insert";
             this.buttonAdd.UseVisualStyleBackColor = true;
             this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
+            // 
+            // inventoryBindingSource
+            // 
+            this.inventoryBindingSource.DataSource = typeof(eBIT_Application.inventory);
             // 
             // AddInventory
             // 
