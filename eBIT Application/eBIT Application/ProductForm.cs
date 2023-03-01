@@ -17,18 +17,8 @@ namespace eBIT_Application
             InitializeComponent();
         }
 
-        private void inventoryBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.inventoryBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.eBITDataSet);
-
-        }
-
         private void ProductForm_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'eBITDataSet.inventory' table. You can move, or remove it, as needed.
-            this.inventoryTableAdapter.Fill(this.eBITDataSet.inventory);
 
         }
 
@@ -40,7 +30,7 @@ namespace eBIT_Application
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            inventoryDataGridView.Refresh();
+            //inventoryDataGridView.Refresh();
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
