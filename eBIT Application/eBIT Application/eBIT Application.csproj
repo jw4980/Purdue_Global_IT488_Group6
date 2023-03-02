@@ -88,6 +88,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>eBITDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="eBITDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>eBITDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -196,6 +201,17 @@
     </None>
     <None Include="eBITDataSet.xss">
       <DependentUpon>eBITDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="eBITDataSet1.xsc">
+      <DependentUpon>eBITDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="eBITDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>eBITDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="eBITDataSet1.xss">
+      <DependentUpon>eBITDataSet1.xsd</DependentUpon>
     </None>
     <None Include="Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>

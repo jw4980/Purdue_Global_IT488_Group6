@@ -179,36 +179,36 @@
             // 
             this.item_quantityTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.inventoryBindingSource, "item_quantity", true));
             this.item_quantityTextBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.item_quantityTextBox.Location = new System.Drawing.Point(493, 207);
+            this.item_quantityTextBox.Location = new System.Drawing.Point(502, 207);
             this.item_quantityTextBox.Name = "item_quantityTextBox";
-            this.item_quantityTextBox.Size = new System.Drawing.Size(78, 32);
+            this.item_quantityTextBox.Size = new System.Drawing.Size(69, 32);
             this.item_quantityTextBox.TabIndex = 12;
             // 
             // list_priceTextBox
             // 
             this.list_priceTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.inventoryBindingSource, "list_price", true));
             this.list_priceTextBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.list_priceTextBox.Location = new System.Drawing.Point(282, 207);
+            this.list_priceTextBox.Location = new System.Drawing.Point(291, 207);
             this.list_priceTextBox.Name = "list_priceTextBox";
-            this.list_priceTextBox.Size = new System.Drawing.Size(110, 32);
+            this.list_priceTextBox.Size = new System.Drawing.Size(101, 32);
             this.list_priceTextBox.TabIndex = 14;
             // 
             // sale_endDateTimePicker
             // 
             this.sale_endDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.inventoryBindingSource, "sale_end", true));
             this.sale_endDateTimePicker.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sale_endDateTimePicker.Location = new System.Drawing.Point(206, 316);
+            this.sale_endDateTimePicker.Location = new System.Drawing.Point(219, 316);
             this.sale_endDateTimePicker.Name = "sale_endDateTimePicker";
-            this.sale_endDateTimePicker.Size = new System.Drawing.Size(304, 28);
+            this.sale_endDateTimePicker.Size = new System.Drawing.Size(299, 28);
             this.sale_endDateTimePicker.TabIndex = 16;
             // 
             // sale_startDateTimePicker
             // 
             this.sale_startDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.inventoryBindingSource, "sale_start", true));
             this.sale_startDateTimePicker.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sale_startDateTimePicker.Location = new System.Drawing.Point(206, 268);
+            this.sale_startDateTimePicker.Location = new System.Drawing.Point(219, 268);
             this.sale_startDateTimePicker.Name = "sale_startDateTimePicker";
-            this.sale_startDateTimePicker.Size = new System.Drawing.Size(306, 28);
+            this.sale_startDateTimePicker.Size = new System.Drawing.Size(299, 28);
             this.sale_startDateTimePicker.TabIndex = 18;
             // 
             // labelTitle

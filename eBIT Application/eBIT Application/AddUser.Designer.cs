@@ -37,7 +37,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.txtUserFirst = new System.Windows.Forms.TextBox();
             this.txtUserName = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtPass = new System.Windows.Forms.TextBox();
             this.txtUserEmail = new System.Windows.Forms.TextBox();
             this.txtUserLast = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
@@ -48,7 +48,7 @@
             this.btnUserInsert.Location = new System.Drawing.Point(308, 369);
             this.btnUserInsert.Name = "btnUserInsert";
             this.btnUserInsert.Size = new System.Drawing.Size(106, 53);
-            this.btnUserInsert.TabIndex = 0;
+            this.btnUserInsert.TabIndex = 12;
             this.btnUserInsert.Text = "Insert";
             this.btnUserInsert.UseVisualStyleBackColor = true;
             this.btnUserInsert.Click += new System.EventHandler(this.btnUserInsert_Click);
@@ -58,12 +58,11 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(159, 30);
+            this.label1.Location = new System.Drawing.Point(181, 38);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(398, 34);
             this.label1.TabIndex = 1;
             this.label1.Text = "Enter User Information Below";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -118,9 +117,9 @@
             // txtUserFirst
             // 
             this.txtUserFirst.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUserFirst.Location = new System.Drawing.Point(145, 109);
+            this.txtUserFirst.Location = new System.Drawing.Point(154, 109);
             this.txtUserFirst.Name = "txtUserFirst";
-            this.txtUserFirst.Size = new System.Drawing.Size(522, 30);
+            this.txtUserFirst.Size = new System.Drawing.Size(513, 30);
             this.txtUserFirst.TabIndex = 7;
             // 
             // txtUserName
@@ -129,15 +128,15 @@
             this.txtUserName.Location = new System.Drawing.Point(145, 255);
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(522, 30);
-            this.txtUserName.TabIndex = 8;
+            this.txtUserName.TabIndex = 10;
             // 
-            // textBox3
+            // txtPass
             // 
-            this.textBox3.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(133, 304);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(534, 30);
-            this.textBox3.TabIndex = 9;
+            this.txtPass.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPass.Location = new System.Drawing.Point(142, 304);
+            this.txtPass.Name = "txtPass";
+            this.txtPass.Size = new System.Drawing.Size(525, 30);
+            this.txtPass.TabIndex = 11;
             // 
             // txtUserEmail
             // 
@@ -145,15 +144,15 @@
             this.txtUserEmail.Location = new System.Drawing.Point(101, 206);
             this.txtUserEmail.Name = "txtUserEmail";
             this.txtUserEmail.Size = new System.Drawing.Size(566, 30);
-            this.txtUserEmail.TabIndex = 10;
+            this.txtUserEmail.TabIndex = 9;
             // 
             // txtUserLast
             // 
             this.txtUserLast.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUserLast.Location = new System.Drawing.Point(145, 157);
+            this.txtUserLast.Location = new System.Drawing.Point(154, 157);
             this.txtUserLast.Name = "txtUserLast";
-            this.txtUserLast.Size = new System.Drawing.Size(522, 30);
-            this.txtUserLast.TabIndex = 11;
+            this.txtUserLast.Size = new System.Drawing.Size(513, 30);
+            this.txtUserLast.TabIndex = 8;
             // 
             // AddUser
             // 
@@ -162,7 +161,7 @@
             this.ClientSize = new System.Drawing.Size(712, 468);
             this.Controls.Add(this.txtUserLast);
             this.Controls.Add(this.txtUserEmail);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtPass);
             this.Controls.Add(this.txtUserName);
             this.Controls.Add(this.txtUserFirst);
             this.Controls.Add(this.label6);
@@ -190,7 +189,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtUserFirst;
         private System.Windows.Forms.TextBox txtUserName;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtPass;
         private System.Windows.Forms.TextBox txtUserEmail;
         private System.Windows.Forms.TextBox txtUserLast;
     }

@@ -74,12 +74,14 @@
             // lblClear
             // 
             this.lblClear.AutoSize = true;
+            this.lblClear.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblClear.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblClear.Location = new System.Drawing.Point(32, 341);
             this.lblClear.Name = "lblClear";
             this.lblClear.Size = new System.Drawing.Size(55, 21);
             this.lblClear.TabIndex = 2;
             this.lblClear.Text = "Clear";
+            this.lblClear.Click += new System.EventHandler(this.lblClear_Click);
             // 
             // lblPass
             // 
@@ -114,10 +116,11 @@
             this.txtPass.Name = "txtPass";
             this.txtPass.Size = new System.Drawing.Size(158, 32);
             this.txtPass.TabIndex = 6;
+            this.txtPass.UseSystemPasswordChar = true;
             // 
             // btnSubmit
             // 
-            this.btnSubmit.Enabled = false;
+            this.btnSubmit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSubmit.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubmit.Location = new System.Drawing.Point(98, 257);
             this.btnSubmit.Name = "btnSubmit";
@@ -125,6 +128,7 @@
             this.btnSubmit.TabIndex = 7;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = true;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // chkPass
             // 
@@ -136,6 +140,7 @@
             this.chkPass.TabIndex = 8;
             this.chkPass.Text = "Show Password";
             this.chkPass.UseVisualStyleBackColor = true;
+            this.chkPass.CheckedChanged += new System.EventHandler(this.chkPass_CheckedChanged);
             // 
             // LogIn
             // 
@@ -151,7 +156,7 @@
             this.Controls.Add(this.lblClear);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "LogIn";
             this.Text = "Please Log In";
             this.panel1.ResumeLayout(false);
