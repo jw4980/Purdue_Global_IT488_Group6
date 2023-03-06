@@ -16,7 +16,7 @@ namespace eBIT_Customers
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new AddCustomerForm());
+            Application.Run(new ViewCustomer());
         }
     }
 }
