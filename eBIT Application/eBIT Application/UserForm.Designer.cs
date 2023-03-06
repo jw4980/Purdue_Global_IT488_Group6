@@ -42,16 +42,16 @@
             this.usernameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.eBITDataSet1 = new eBIT_Application.eBITDataSet1();
+            this.eBITDataSet = new eBIT_Application.eBITDataSet();
             this.dataUser = new System.Windows.Forms.DataGridView();
-            this.usersTableAdapter = new eBIT_Application.eBITDataSet1TableAdapters.usersTableAdapter();
+            this.usersTableAdapter = new eBIT_Application.eBITDataSetTableAdapters.usersTableAdapter();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picRefresh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eBITDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eBITDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataUser)).BeginInit();
             this.SuspendLayout();
             // 
@@ -175,12 +175,12 @@
             // usersBindingSource
             // 
             this.usersBindingSource.DataMember = "users";
-            this.usersBindingSource.DataSource = this.eBITDataSet1;
+            this.usersBindingSource.DataSource = this.eBITDataSet;
             // 
             // eBITDataSet1
             // 
-            this.eBITDataSet1.DataSetName = "eBITDataSet1";
-            this.eBITDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.eBITDataSet.DataSetName = "eBITDataSet";
+            this.eBITDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // dataUser
             // 
@@ -219,7 +219,7 @@
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvUser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eBITDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eBITDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataUser)).EndInit();
             this.ResumeLayout(false);
 
@@ -231,9 +231,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView dataUser;
-        private eBITDataSet1 eBITDataSet1;
+        private eBITDataSet eBITDataSet;
         private System.Windows.Forms.BindingSource usersBindingSource;
-        private eBITDataSet1TableAdapters.usersTableAdapter usersTableAdapter;
+        private eBITDataSetTableAdapters.usersTableAdapter usersTableAdapter;
         private System.Windows.Forms.DataGridView dgvUser;
         private System.Windows.Forms.DataGridViewTextBoxColumn firstnameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn lastnameDataGridViewTextBoxColumn;

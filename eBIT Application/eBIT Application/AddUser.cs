@@ -13,45 +13,28 @@ namespace eBIT_Application
 {
     public partial class AddUser : Form
     {
-        SqlConnection con = new SqlConnection(@"Data Source=it488group6.database.windows.net;Initial Catalog=eBIT;User ID=JenniferW;Password=Password2;Connect Timeout=30;Encrypt=True;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
-        SqlCommand cm = new SqlCommand();
+
         public AddUser()
         {
             InitializeComponent();
         }
 
-        private void btnUserInsert_Click(object sender, EventArgs e)
+        private void AddUser_Load(object sender, EventArgs e)
         {
-            try
-            {
-                if (MessageBox.Show("Are you sure you want to save this user?", "Saving Record", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                {
-                    cm = new SqlCommand("Insert INTO dbo.users(first_name, last_name, email, user_name, password)VALUES(@first_name, @last_name, @email, @user_name, @password)", con);
-                    cm.Parameters.AddWithValue("@first_name", txtUserFirst.Text);
-                    cm.Parameters.AddWithValue("@last_name", txtUserLast.Text);
-                    cm.Parameters.AddWithValue("@email", txtUserEmail.Text);
-                    cm.Parameters.AddWithValue("@user_name", txtUserName.Text);
-                    cm.Parameters.AddWithValue("@password", txtPass.Text);
-                    con.Open();
-                    cm.ExecuteNonQuery();
-                    con.Close();
-                    MessageBox.Show("User has been successfully saved.");
-                    Clear();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }                
-        public void Clear()
-        {
-            txtUserFirst.Clear();
-            txtUserLast.Clear();
-            txtUserEmail.Clear();
-            txtPass.Clear();    
-            txtUserName.Clear();
+            // TODO: This line of code loads data into the 'eBITDataSet.users' table. You can move, or remove it, as needed.
+            //this.usersTableAdapter.Fill(this.eBITDataSet.users);
+            usersBindingSource.DataSource = new user();
         }
-            
+
+        private async void button1_Click(object sender, EventArgs e)
+        {
+            eBITEntities db = new eBITEntities();
+            db.users.Add(usersBindingSource.Current as user);
+            int result = await db.SaveChangesAsync();
+            if (result > 0)
+                MessageBox.Show("Data has been entered successfully");
+
+  
+        }
     }
 }

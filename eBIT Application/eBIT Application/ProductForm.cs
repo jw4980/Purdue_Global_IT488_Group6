@@ -19,23 +19,22 @@ namespace eBIT_Application
 
         private void ProductForm_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'eBITDataSet.inventory' table. You can move, or remove it, as needed.
+            this.inventoryTableAdapter.Fill(this.eBITDataSet.inventory);
 
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void picAdd_Click(object sender, EventArgs e)
         {
             AddInventory form = new AddInventory();
             form.ShowDialog();
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
+        private void picRefresh_Click(object sender, EventArgs e)
         {
-            //inventoryDataGridView.Refresh();
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
+            inventoryTableAdapter.Fill(eBITDataSet.inventory);
+            dgvInventory.Invalidate();
+            dgvInventory.Refresh();
         }
     }
 }

@@ -32,6 +32,11 @@ namespace eBIT_Application
                 ProductForm newMDIChild = new ProductForm();
                 // Set the Parent Form of the Child window.
                 newMDIChild.MdiParent = this;
+                newMDIChild.ClientSize = new System.Drawing.Size(2000, 800);
+                this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+                newMDIChild.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+                newMDIChild.Dock = DockStyle.Fill;
+                
                 // Display the new form.
                 newMDIChild.Show();
             }
@@ -40,6 +45,12 @@ namespace eBIT_Application
                 ProductForm newMDIChild = new ProductForm();
                 // Set the Parent Form of the Child window.
                 newMDIChild.MdiParent = this;
+
+                newMDIChild.ClientSize = new System.Drawing.Size(2000, 800);
+                this.WindowState= System.Windows.Forms.FormWindowState.Maximized;
+                newMDIChild.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+                newMDIChild.Dock = DockStyle.Fill;
+
                 // Display the new form.
                 newMDIChild.Show();
             }
@@ -52,12 +63,24 @@ namespace eBIT_Application
                 ActiveMdiChild.Close();
                 UserForm newMDIChild = new UserForm();
                 newMDIChild.MdiParent = this;
+
+                newMDIChild.ClientSize = new System.Drawing.Size(2000, 800);
+                this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+                newMDIChild.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+                newMDIChild.Dock = DockStyle.Fill;
+
                 newMDIChild.Show();
             }
             else
             {
                 UserForm newMDIChild = new UserForm();
                 newMDIChild.MdiParent = this;
+
+                newMDIChild.ClientSize = new System.Drawing.Size(2000, 800);
+                this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+                newMDIChild.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+                newMDIChild.Dock = DockStyle.Fill;
+
                 newMDIChild.Show();
             }
         }

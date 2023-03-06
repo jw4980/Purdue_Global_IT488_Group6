@@ -28,169 +28,258 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnUserInsert = new System.Windows.Forms.Button();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.Label user_nameLabel;
+            System.Windows.Forms.Label emailLabel;
+            System.Windows.Forms.Label passwordLabel;
+            System.Windows.Forms.Label first_nameLabel;
+            System.Windows.Forms.Label last_nameLabel;
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.eBITDataSet = new eBIT_Application.eBITDataSet();
+            this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.usersTableAdapter = new eBIT_Application.eBITDataSetTableAdapters.usersTableAdapter();
+            this.tableAdapterManager = new eBIT_Application.eBITDataSetTableAdapters.TableAdapterManager();
+            this.user_nameTextBox = new System.Windows.Forms.TextBox();
+            this.emailTextBox = new System.Windows.Forms.TextBox();
+            this.passwordTextBox = new System.Windows.Forms.TextBox();
+            this.first_nameTextBox = new System.Windows.Forms.TextBox();
+            this.last_nameTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lbleUserPass = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtUserFirst = new System.Windows.Forms.TextBox();
-            this.txtUserName = new System.Windows.Forms.TextBox();
-            this.txtPass = new System.Windows.Forms.TextBox();
-            this.txtUserEmail = new System.Windows.Forms.TextBox();
-            this.txtUserLast = new System.Windows.Forms.TextBox();
+            this.buttonSubmit = new System.Windows.Forms.Button();
+            user_nameLabel = new System.Windows.Forms.Label();
+            emailLabel = new System.Windows.Forms.Label();
+            passwordLabel = new System.Windows.Forms.Label();
+            first_nameLabel = new System.Windows.Forms.Label();
+            last_nameLabel = new System.Windows.Forms.Label();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.eBITDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnUserInsert
+            // panel1
             // 
-            this.btnUserInsert.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUserInsert.Location = new System.Drawing.Point(308, 369);
-            this.btnUserInsert.Name = "btnUserInsert";
-            this.btnUserInsert.Size = new System.Drawing.Size(106, 53);
-            this.btnUserInsert.TabIndex = 12;
-            this.btnUserInsert.Text = "Insert";
-            this.btnUserInsert.UseVisualStyleBackColor = true;
-            this.btnUserInsert.Click += new System.EventHandler(this.btnUserInsert_Click);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(712, 65);
+            this.panel1.TabIndex = 0;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.buttonSubmit);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 301);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(712, 63);
+            this.panel2.TabIndex = 1;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(user_nameLabel);
+            this.panel3.Controls.Add(this.user_nameTextBox);
+            this.panel3.Controls.Add(emailLabel);
+            this.panel3.Controls.Add(this.emailTextBox);
+            this.panel3.Controls.Add(passwordLabel);
+            this.panel3.Controls.Add(this.passwordTextBox);
+            this.panel3.Controls.Add(first_nameLabel);
+            this.panel3.Controls.Add(this.first_nameTextBox);
+            this.panel3.Controls.Add(last_nameLabel);
+            this.panel3.Controls.Add(this.last_nameTextBox);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(0, 65);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(712, 236);
+            this.panel3.TabIndex = 2;
+            // 
+            // eBITDataSet
+            // 
+            this.eBITDataSet.DataSetName = "eBITDataSet";
+            this.eBITDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // usersBindingSource
+            // 
+            this.usersBindingSource.DataMember = "users";
+            this.usersBindingSource.DataSource = this.eBITDataSet;
+            // 
+            // usersTableAdapter
+            // 
+            this.usersTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.customer_addressTableAdapter = null;
+            this.tableAdapterManager.customer_contactTableAdapter = null;
+            this.tableAdapterManager.customersTableAdapter = null;
+            this.tableAdapterManager.inventoryTableAdapter = null;
+            this.tableAdapterManager.ordersTableAdapter = null;
+            this.tableAdapterManager.product_categoryTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = eBIT_Application.eBITDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.usersTableAdapter = this.usersTableAdapter;
+            // 
+            // user_nameLabel
+            // 
+            user_nameLabel.AutoSize = true;
+            user_nameLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            user_nameLabel.Location = new System.Drawing.Point(96, 157);
+            user_nameLabel.Name = "user_nameLabel";
+            user_nameLabel.Size = new System.Drawing.Size(123, 23);
+            user_nameLabel.TabIndex = 2;
+            user_nameLabel.Text = "User Name:";
+            // 
+            // user_nameTextBox
+            // 
+            this.user_nameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource, "user_name", true));
+            this.user_nameTextBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.user_nameTextBox.Location = new System.Drawing.Point(227, 154);
+            this.user_nameTextBox.Name = "user_nameTextBox";
+            this.user_nameTextBox.Size = new System.Drawing.Size(295, 32);
+            this.user_nameTextBox.TabIndex = 3;
+            // 
+            // emailLabel
+            // 
+            emailLabel.AutoSize = true;
+            emailLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            emailLabel.Location = new System.Drawing.Point(151, 113);
+            emailLabel.Name = "emailLabel";
+            emailLabel.Size = new System.Drawing.Size(68, 23);
+            emailLabel.TabIndex = 4;
+            emailLabel.Text = "Email:";
+            // 
+            // emailTextBox
+            // 
+            this.emailTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource, "email", true));
+            this.emailTextBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.emailTextBox.Location = new System.Drawing.Point(227, 110);
+            this.emailTextBox.Name = "emailTextBox";
+            this.emailTextBox.Size = new System.Drawing.Size(295, 32);
+            this.emailTextBox.TabIndex = 5;
+            // 
+            // passwordLabel
+            // 
+            passwordLabel.AutoSize = true;
+            passwordLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            passwordLabel.Location = new System.Drawing.Point(113, 201);
+            passwordLabel.Name = "passwordLabel";
+            passwordLabel.Size = new System.Drawing.Size(106, 23);
+            passwordLabel.TabIndex = 6;
+            passwordLabel.Text = "Password:";
+            // 
+            // passwordTextBox
+            // 
+            this.passwordTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource, "password", true));
+            this.passwordTextBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passwordTextBox.Location = new System.Drawing.Point(227, 198);
+            this.passwordTextBox.Name = "passwordTextBox";
+            this.passwordTextBox.Size = new System.Drawing.Size(295, 32);
+            this.passwordTextBox.TabIndex = 7;
+            // 
+            // first_nameLabel
+            // 
+            first_nameLabel.AutoSize = true;
+            first_nameLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            first_nameLabel.Location = new System.Drawing.Point(101, 23);
+            first_nameLabel.Name = "first_nameLabel";
+            first_nameLabel.Size = new System.Drawing.Size(118, 23);
+            first_nameLabel.TabIndex = 8;
+            first_nameLabel.Text = "First Name:";
+            // 
+            // first_nameTextBox
+            // 
+            this.first_nameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource, "first_name", true));
+            this.first_nameTextBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.first_nameTextBox.Location = new System.Drawing.Point(227, 20);
+            this.first_nameTextBox.Name = "first_nameTextBox";
+            this.first_nameTextBox.Size = new System.Drawing.Size(295, 32);
+            this.first_nameTextBox.TabIndex = 9;
+            // 
+            // last_nameLabel
+            // 
+            last_nameLabel.AutoSize = true;
+            last_nameLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            last_nameLabel.Location = new System.Drawing.Point(100, 72);
+            last_nameLabel.Name = "last_nameLabel";
+            last_nameLabel.Size = new System.Drawing.Size(119, 23);
+            last_nameLabel.TabIndex = 10;
+            last_nameLabel.Text = "Last Name:";
+            // 
+            // last_nameTextBox
+            // 
+            this.last_nameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource, "last_name", true));
+            this.last_nameTextBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.last_nameTextBox.Location = new System.Drawing.Point(227, 69);
+            this.last_nameTextBox.Name = "last_nameTextBox";
+            this.last_nameTextBox.Size = new System.Drawing.Size(295, 32);
+            this.last_nameTextBox.TabIndex = 11;
             // 
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(181, 38);
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(82, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(398, 34);
-            this.label1.TabIndex = 1;
+            this.label1.Size = new System.Drawing.Size(570, 47);
+            this.label1.TabIndex = 0;
             this.label1.Text = "Enter User Information Below";
             // 
-            // label2
+            // buttonSubmit
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(33, 109);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(111, 23);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "First Name";
-            // 
-            // lbleUserPass
-            // 
-            this.lbleUserPass.AutoSize = true;
-            this.lbleUserPass.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbleUserPass.Location = new System.Drawing.Point(33, 304);
-            this.lbleUserPass.Name = "lbleUserPass";
-            this.lbleUserPass.Size = new System.Drawing.Size(103, 23);
-            this.lbleUserPass.TabIndex = 3;
-            this.lbleUserPass.Text = "Password";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(33, 255);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(108, 23);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Username";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(33, 206);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(62, 23);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "Email";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(33, 157);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(115, 23);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "Last Name";
-            // 
-            // txtUserFirst
-            // 
-            this.txtUserFirst.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUserFirst.Location = new System.Drawing.Point(154, 109);
-            this.txtUserFirst.Name = "txtUserFirst";
-            this.txtUserFirst.Size = new System.Drawing.Size(513, 30);
-            this.txtUserFirst.TabIndex = 7;
-            // 
-            // txtUserName
-            // 
-            this.txtUserName.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUserName.Location = new System.Drawing.Point(145, 255);
-            this.txtUserName.Name = "txtUserName";
-            this.txtUserName.Size = new System.Drawing.Size(522, 30);
-            this.txtUserName.TabIndex = 10;
-            // 
-            // txtPass
-            // 
-            this.txtPass.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPass.Location = new System.Drawing.Point(142, 304);
-            this.txtPass.Name = "txtPass";
-            this.txtPass.Size = new System.Drawing.Size(525, 30);
-            this.txtPass.TabIndex = 11;
-            // 
-            // txtUserEmail
-            // 
-            this.txtUserEmail.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUserEmail.Location = new System.Drawing.Point(101, 206);
-            this.txtUserEmail.Name = "txtUserEmail";
-            this.txtUserEmail.Size = new System.Drawing.Size(566, 30);
-            this.txtUserEmail.TabIndex = 9;
-            // 
-            // txtUserLast
-            // 
-            this.txtUserLast.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUserLast.Location = new System.Drawing.Point(154, 157);
-            this.txtUserLast.Name = "txtUserLast";
-            this.txtUserLast.Size = new System.Drawing.Size(513, 30);
-            this.txtUserLast.TabIndex = 8;
+            this.buttonSubmit.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.buttonSubmit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SteelBlue;
+            this.buttonSubmit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSteelBlue;
+            this.buttonSubmit.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSubmit.Location = new System.Drawing.Point(293, 6);
+            this.buttonSubmit.Name = "buttonSubmit";
+            this.buttonSubmit.Size = new System.Drawing.Size(134, 49);
+            this.buttonSubmit.TabIndex = 0;
+            this.buttonSubmit.Text = "Submit";
+            this.buttonSubmit.UseVisualStyleBackColor = true;
+            this.buttonSubmit.Click += new System.EventHandler(this.button1_Click);
             // 
             // AddUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(712, 468);
-            this.Controls.Add(this.txtUserLast);
-            this.Controls.Add(this.txtUserEmail);
-            this.Controls.Add(this.txtPass);
-            this.Controls.Add(this.txtUserName);
-            this.Controls.Add(this.txtUserFirst);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.lbleUserPass);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnUserInsert);
+            this.ClientSize = new System.Drawing.Size(712, 364);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.Name = "AddUser";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Add User";
+            this.Load += new System.EventHandler(this.AddUser_Load);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.eBITDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button btnUserInsert;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
+        private eBITDataSet eBITDataSet;
+        private System.Windows.Forms.BindingSource usersBindingSource;
+        private eBITDataSetTableAdapters.usersTableAdapter usersTableAdapter;
+        private eBITDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label lbleUserPass;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtUserFirst;
-        private System.Windows.Forms.TextBox txtUserName;
-        private System.Windows.Forms.TextBox txtPass;
-        private System.Windows.Forms.TextBox txtUserEmail;
-        private System.Windows.Forms.TextBox txtUserLast;
+        private System.Windows.Forms.Button buttonSubmit;
+        private System.Windows.Forms.TextBox user_nameTextBox;
+        private System.Windows.Forms.TextBox emailTextBox;
+        private System.Windows.Forms.TextBox passwordTextBox;
+        private System.Windows.Forms.TextBox first_nameTextBox;
+        private System.Windows.Forms.TextBox last_nameTextBox;
     }
 }

@@ -24,7 +24,7 @@ namespace eBIT_Application
         private void UserForm_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'eBITDataSet1.users' table. You can move, or remove it, as needed.
-            this.usersTableAdapter.Fill(this.eBITDataSet1.users);
+            this.usersTableAdapter.Fill(this.eBITDataSet.users);
 
         }
 
@@ -36,6 +36,8 @@ namespace eBIT_Application
 
         private void picRefresh_Click(object sender, EventArgs e)
         {
+            usersTableAdapter.Fill(eBITDataSet.users);
+            dgvUser.Invalidate();
             dgvUser.Refresh();
         }
     }

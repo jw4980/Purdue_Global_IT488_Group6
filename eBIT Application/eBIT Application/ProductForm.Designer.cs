@@ -29,159 +29,164 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductForm));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.picRerfresh = new System.Windows.Forms.PictureBox();
-            this.picAdd = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.picAdd = new System.Windows.Forms.PictureBox();
+            this.picRefresh = new System.Windows.Forms.PictureBox();
+            this.dgvInventory = new System.Windows.Forms.DataGridView();
+            this.eBITDataSet = new eBIT_Application.eBITDataSet();
+            this.inventoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.inventoryTableAdapter = new eBIT_Application.eBITDataSetTableAdapters.inventoryTableAdapter();
             this.itemidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.itemdescDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.itemnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.itemquantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.categoryidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.listpriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.itemcostDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.itemimageDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
             this.salestartDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.saleendDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.inventoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picRerfresh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picAdd)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picRefresh)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvInventory)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eBITDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inventoryBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.dataGridView1);
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel1.Controls.Add(this.picRefresh);
+            this.panel1.Controls.Add(this.picAdd);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 440);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1205, 457);
+            this.panel1.Size = new System.Drawing.Size(1205, 68);
             this.panel1.TabIndex = 0;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.itemidDataGridViewTextBoxColumn,
-            this.itemdescDataGridViewTextBoxColumn,
-            this.itemquantityDataGridViewTextBoxColumn,
-            this.categoryidDataGridViewTextBoxColumn,
-            this.listpriceDataGridViewTextBoxColumn,
-            this.itemcostDataGridViewTextBoxColumn,
-            this.salestartDataGridViewTextBoxColumn,
-            this.saleendDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.inventoryBindingSource;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.GridColor = System.Drawing.Color.White;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView1.RowHeadersWidth = 51;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1205, 0);
-            this.dataGridView1.TabIndex = 1;
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.SteelBlue;
-            this.panel2.Controls.Add(this.picRerfresh);
-            this.panel2.Controls.Add(this.picAdd);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, -32768);
+            this.panel2.Controls.Add(this.dgvInventory);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1205, 34650);
-            this.panel2.TabIndex = 0;
-            // 
-            // picRerfresh
-            // 
-            this.picRerfresh.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picRerfresh.Image = ((System.Drawing.Image)(resources.GetObject("picRerfresh.Image")));
-            this.picRerfresh.Location = new System.Drawing.Point(1139, 2);
-            this.picRerfresh.Name = "picRerfresh";
-            this.picRerfresh.Size = new System.Drawing.Size(34, 37);
-            this.picRerfresh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picRerfresh.TabIndex = 3;
-            this.picRerfresh.TabStop = false;
-            this.picRerfresh.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
-            // picAdd
-            // 
-            this.picAdd.Image = ((System.Drawing.Image)(resources.GetObject("picAdd.Image")));
-            this.picAdd.Location = new System.Drawing.Point(1179, 2);
-            this.picAdd.Name = "picAdd";
-            this.picAdd.Size = new System.Drawing.Size(34, 37);
-            this.picAdd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picAdd.TabIndex = 2;
-            this.picAdd.TabStop = false;
-            this.picAdd.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.panel2.Size = new System.Drawing.Size(1205, 440);
+            this.panel2.TabIndex = 1;
             // 
             // label1
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(6, 32767);
+            this.label1.Location = new System.Drawing.Point(11, 15);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(264, 34);
             this.label1.TabIndex = 0;
             this.label1.Text = "Manage Inventory";
             // 
+            // picAdd
+            // 
+            this.picAdd.Image = ((System.Drawing.Image)(resources.GetObject("picAdd.Image")));
+            this.picAdd.Location = new System.Drawing.Point(1138, 14);
+            this.picAdd.Name = "picAdd";
+            this.picAdd.Size = new System.Drawing.Size(43, 42);
+            this.picAdd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picAdd.TabIndex = 2;
+            this.picAdd.TabStop = false;
+            this.picAdd.Click += new System.EventHandler(this.picAdd_Click);
+            // 
+            // picRefresh
+            // 
+            this.picRefresh.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picRefresh.Image = ((System.Drawing.Image)(resources.GetObject("picRefresh.Image")));
+            this.picRefresh.Location = new System.Drawing.Point(1060, 15);
+            this.picRefresh.Name = "picRefresh";
+            this.picRefresh.Size = new System.Drawing.Size(43, 42);
+            this.picRefresh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picRefresh.TabIndex = 3;
+            this.picRefresh.TabStop = false;
+            this.picRefresh.Click += new System.EventHandler(this.picRefresh_Click);
+            // 
+            // dgvInventory
+            // 
+            this.dgvInventory.AllowUserToAddRows = false;
+            this.dgvInventory.AutoGenerateColumns = false;
+            this.dgvInventory.BackgroundColor = System.Drawing.Color.White;
+            this.dgvInventory.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvInventory.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvInventory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvInventory.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.itemidDataGridViewTextBoxColumn,
+            this.itemnameDataGridViewTextBoxColumn,
+            this.itemquantityDataGridViewTextBoxColumn,
+            this.categoryidDataGridViewTextBoxColumn,
+            this.listpriceDataGridViewTextBoxColumn,
+            this.itemcostDataGridViewTextBoxColumn,
+            this.itemimageDataGridViewImageColumn,
+            this.salestartDataGridViewTextBoxColumn,
+            this.saleendDataGridViewTextBoxColumn});
+            this.dgvInventory.DataSource = this.inventoryBindingSource;
+            this.dgvInventory.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvInventory.Location = new System.Drawing.Point(0, 0);
+            this.dgvInventory.Name = "dgvInventory";
+            this.dgvInventory.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvInventory.RowHeadersWidth = 51;
+            this.dgvInventory.RowTemplate.Height = 24;
+            this.dgvInventory.Size = new System.Drawing.Size(1205, 440);
+            this.dgvInventory.TabIndex = 0;
+            // 
+            // eBITDataSet
+            // 
+            this.eBITDataSet.DataSetName = "eBITDataSet";
+            this.eBITDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // inventoryBindingSource
+            // 
+            this.inventoryBindingSource.DataMember = "inventory";
+            this.inventoryBindingSource.DataSource = this.eBITDataSet;
+            // 
+            // inventoryTableAdapter
+            // 
+            this.inventoryTableAdapter.ClearBeforeFill = true;
+            // 
             // itemidDataGridViewTextBoxColumn
             // 
             this.itemidDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.itemidDataGridViewTextBoxColumn.DataPropertyName = "item_id";
-            this.itemidDataGridViewTextBoxColumn.HeaderText = "Item ID";
+            this.itemidDataGridViewTextBoxColumn.HeaderText = "Item_Id";
             this.itemidDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.itemidDataGridViewTextBoxColumn.Name = "itemidDataGridViewTextBoxColumn";
-            this.itemidDataGridViewTextBoxColumn.Width = 109;
+            this.itemidDataGridViewTextBoxColumn.ReadOnly = true;
+            this.itemidDataGridViewTextBoxColumn.Width = 112;
             // 
-            // itemdescDataGridViewTextBoxColumn
+            // itemnameDataGridViewTextBoxColumn
             // 
-            this.itemdescDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.itemdescDataGridViewTextBoxColumn.DataPropertyName = "item_desc";
-            this.itemdescDataGridViewTextBoxColumn.HeaderText = "Description";
-            this.itemdescDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.itemdescDataGridViewTextBoxColumn.Name = "itemdescDataGridViewTextBoxColumn";
+            this.itemnameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.itemnameDataGridViewTextBoxColumn.DataPropertyName = "item_name";
+            this.itemnameDataGridViewTextBoxColumn.HeaderText = "Item Name";
+            this.itemnameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.itemnameDataGridViewTextBoxColumn.Name = "itemnameDataGridViewTextBoxColumn";
             // 
             // itemquantityDataGridViewTextBoxColumn
             // 
             this.itemquantityDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.itemquantityDataGridViewTextBoxColumn.DataPropertyName = "item_quantity";
-            this.itemquantityDataGridViewTextBoxColumn.HeaderText = "Qty";
+            this.itemquantityDataGridViewTextBoxColumn.HeaderText = "Quantity";
             this.itemquantityDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.itemquantityDataGridViewTextBoxColumn.Name = "itemquantityDataGridViewTextBoxColumn";
-            this.itemquantityDataGridViewTextBoxColumn.Width = 74;
+            this.itemquantityDataGridViewTextBoxColumn.Width = 122;
             // 
             // categoryidDataGridViewTextBoxColumn
             // 
@@ -210,6 +215,14 @@
             this.itemcostDataGridViewTextBoxColumn.Name = "itemcostDataGridViewTextBoxColumn";
             this.itemcostDataGridViewTextBoxColumn.Width = 83;
             // 
+            // itemimageDataGridViewImageColumn
+            // 
+            this.itemimageDataGridViewImageColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.itemimageDataGridViewImageColumn.DataPropertyName = "item_image";
+            this.itemimageDataGridViewImageColumn.HeaderText = "";
+            this.itemimageDataGridViewImageColumn.MinimumWidth = 6;
+            this.itemimageDataGridViewImageColumn.Name = "itemimageDataGridViewImageColumn";
+            // 
             // salestartDataGridViewTextBoxColumn
             // 
             this.salestartDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
@@ -221,22 +234,20 @@
             // 
             // saleendDataGridViewTextBoxColumn
             // 
+            this.saleendDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.saleendDataGridViewTextBoxColumn.DataPropertyName = "sale_end";
-            this.saleendDataGridViewTextBoxColumn.HeaderText = "Sale Start";
+            this.saleendDataGridViewTextBoxColumn.HeaderText = "Sale End";
             this.saleendDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.saleendDataGridViewTextBoxColumn.Name = "saleendDataGridViewTextBoxColumn";
-            this.saleendDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // inventoryBindingSource
-            // 
-            this.inventoryBindingSource.DataSource = typeof(eBIT_Application.inventory);
+            this.saleendDataGridViewTextBoxColumn.Width = 121;
             // 
             // ProductForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1205, 457);
+            this.ClientSize = new System.Drawing.Size(1205, 508);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ProductForm";
@@ -244,32 +255,36 @@
             this.Text = "ProductForm";
             this.Load += new System.EventHandler(this.ProductForm_Load);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picRerfresh)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picAdd)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picRefresh)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvInventory)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eBITDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.inventoryBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox picAdd;
-        private System.Windows.Forms.PictureBox picRerfresh;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn itemidDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn itemdescDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.PictureBox picAdd;
+        private System.Windows.Forms.PictureBox picRefresh;
+        private System.Windows.Forms.DataGridView dgvInventory;
+        private eBITDataSet eBITDataSet;
+        private System.Windows.Forms.BindingSource inventoryBindingSource;
+        private eBITDataSetTableAdapters.inventoryTableAdapter inventoryTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn itemidDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn itemnameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn itemquantityDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn categoryidDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn listpriceDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn itemcostDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewImageColumn itemimageDataGridViewImageColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn salestartDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn saleendDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource inventoryBindingSource;
     }
 }
