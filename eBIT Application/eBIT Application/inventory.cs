@@ -15,7 +15,6 @@ namespace eBIT_Application
     public partial class inventory
     {
         public int item_id { get; set; }
-        public string item_desc { get; set; }
         public int item_quantity { get; set; }
         public int category_id { get; set; }
         public decimal list_price { get; set; }
@@ -23,5 +22,8 @@ namespace eBIT_Application
         public byte[] item_image { get; set; }
         public System.DateTime sale_start { get; set; }
         public System.DateTime sale_end { get; set; }
+        public string item_name { get; set; }
+    
+        public virtual product_category product_category { get; set; }
     }
 }
