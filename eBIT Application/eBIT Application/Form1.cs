@@ -17,18 +17,43 @@ namespace eBIT_Application
             InitializeComponent();
         }
 
-        private async void AddInventory_Load(object sender, EventArgs e)
+        private void AddInventory_Load(object sender, EventArgs e)
         {
             inventoryBindingSource.DataSource = new inventory();
         }
 
         private async void buttonAdd_Click(object sender, EventArgs e)
         {
+            if ((inventoryBindingSource.Current as inventory).sale_end.ToString().Contains("1/1/0001") ||
+                (inventoryBindingSource.Current as inventory).sale_start.ToString().Contains("1/1/0001") 
+                 ){
+                MessageBox.Show("Error: one or both date inputs are invalid");
+                return;
+            }
+
             eBITEntities db = new eBITEntities();
             db.inventories.Add(inventoryBindingSource.Current as inventory);
-            int result = await db.SaveChangesAsync();
+            int result = db.SaveChanges();
             if (result > 0)
                 MessageBox.Show("Data has been entered successfully");
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AddSale addSale = new AddSale();
+            addSale.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            AddCategory addCategory = new AddCategory();
+            addCategory.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            ViewCategory viewCategory = new ViewCategory();
+            viewCategory.Show();
         }
     }
 }

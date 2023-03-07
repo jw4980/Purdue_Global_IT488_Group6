@@ -30,7 +30,7 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="product_category">
+    <EntitySetMapping Name="product_categories">
       <EntityTypeMapping TypeName="eBITModel.product_category">
         <MappingFragment StoreEntitySet="product_category">
           <ScalarProperty Name="category_name" ColumnName="category_name" />
