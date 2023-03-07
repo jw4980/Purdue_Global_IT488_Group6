@@ -33,9 +33,27 @@ namespace eBIT_Application
 
             eBITEntities db = new eBITEntities();
             db.inventories.Add(inventoryBindingSource.Current as inventory);
-            int result = await db.SaveChangesAsync();
+            int result = db.SaveChanges();
             if (result > 0)
                 MessageBox.Show("Data has been entered successfully");
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AddSale addSale = new AddSale();
+            addSale.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            AddCategory addCategory = new AddCategory();
+            addCategory.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            ViewCategory viewCategory = new ViewCategory();
+            viewCategory.Show();
         }
     }
 }

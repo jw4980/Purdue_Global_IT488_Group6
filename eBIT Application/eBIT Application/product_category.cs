@@ -14,7 +14,17 @@ namespace eBIT_Application
     
     public partial class product_category
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public product_category()
+        {
+            this.inventories = new HashSet<inventory>();
+        }
+    
         public int category_id { get; set; }
         public string category_desc { get; set; }
+        public string category_name { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<inventory> inventories { get; set; }
     }
 }

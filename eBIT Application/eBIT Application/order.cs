@@ -22,5 +22,7 @@ namespace eBIT_Application
         public decimal ship_cost { get; set; }
         public decimal order_total { get; set; }
         public string tracking { get; set; }
+    
+        public virtual customer customer { get; set; }
     }
 }

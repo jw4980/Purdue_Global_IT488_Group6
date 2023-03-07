@@ -20,6 +20,7 @@ namespace eBIT_Application
         private async void AddSale_Load(object sender, EventArgs e)
         {
             orderBindingSource.DataSource = new order();
+          
         }
 
         private async void button_addsale_Click(object sender, EventArgs e)
