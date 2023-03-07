@@ -26,8 +26,7 @@ namespace eBIT_Customers.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=it488group6.database.windows.net;Initial Catalog=eBIT;Persist Securit" +
-            "y Info=True;User ID=dsmith820;Password=DonotH@ck2")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=it488group6.database.windows.net;Initial Catalog=eBIT;Integrated Security=False;Persist Security Info=True;User ID=dsmith820;Password=DonotH@ck2")]
         public string eBITConnectionString {
             get {
                 return ((string)(this["eBITConnectionString"]));

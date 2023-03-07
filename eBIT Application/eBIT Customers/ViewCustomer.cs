@@ -30,17 +30,14 @@ namespace eBIT_Customers
             _context.SaveChanges();
 
             customersDataGridView.Refresh();
-            customer_addressDataGridView.Refresh();
-            customer_contactDataGridView.Refresh();
+           
         }
 
         private void ViewCustomer_Load(object sender, EventArgs e)
         {
             //base.OnLoad(e);
             // TODO: This line of code loads data into the 'eBITCustomerDataSet.customer_contact' table. You can move, or remove it, as needed.
-            this.customer_contactTableAdapter.Fill(this.eBITCustomerDataSet.customer_contact);
             // TODO: This line of code loads data into the 'eBITCustomerDataSet.customer_address' table. You can move, or remove it, as needed.
-            this.customer_addressTableAdapter.Fill(this.eBITCustomerDataSet.customer_address);
 
             _context.customers.Load();
 
@@ -57,6 +54,11 @@ namespace eBIT_Customers
         private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
         {
             Application.Run(new AddCustomerForm());
+        }
+
+        private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

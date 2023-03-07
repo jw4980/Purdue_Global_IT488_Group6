@@ -1,26 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="eBITModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-  <EntityType Name="customer_address">
-    <Key>
-      <PropertyRef Name="address_id" />
-    </Key>
-    <Property Name="address_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="customer_id" Type="int" Nullable="false" />
-    <Property Name="address_line_1" Type="varchar" MaxLength="255" Nullable="false" />
-    <Property Name="address_line_2" Type="varchar" MaxLength="255" />
-    <Property Name="city" Type="varchar" MaxLength="100" Nullable="false" />
-    <Property Name="state" Type="char" MaxLength="2" Nullable="false" />
-    <Property Name="zip" Type="smallint" Nullable="false" />
-  </EntityType>
-  <EntityType Name="customer_contact">
-    <Key>
-      <PropertyRef Name="contact_id" />
-    </Key>
-    <Property Name="contact_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="customer_id" Type="int" Nullable="false" />
-    <Property Name="phone" Type="int" Nullable="false" />
-    <Property Name="email" Type="varchar" MaxLength="255" Nullable="false" />
-  </EntityType>
   <EntityType Name="customers">
     <Key>
       <PropertyRef Name="customer_id" />
@@ -29,7 +8,13 @@
     <Property Name="first_name" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="last_name" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="ebay_username" Type="varchar" MaxLength="50" Nullable="false" />
-    <Property Name="address_id" Type="int" Nullable="false" />
+    <Property Name="address_line_1" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="address_line_2" Type="varchar" MaxLength="255" />
+    <Property Name="city" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="state" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="zip" Type="smallint" Nullable="false" />
+    <Property Name="phone" Type="int" Nullable="false" />
+    <Property Name="email" Type="varchar" MaxLength="255" Nullable="false" />
   </EntityType>
   <EntityType Name="inventory">
     <Key>
@@ -95,42 +80,6 @@ warning 6002: The table/view 'eBIT.sys.database_firewall_rules' does not have a 
     <Property Name="create_date" Type="datetime" Nullable="false" />
     <Property Name="modify_date" Type="datetime" Nullable="false" />
   </EntityType>
-  <Association Name="FK__customer___custo__6B24EA82">
-    <End Role="customers" Type="Self.customers" Multiplicity="1" />
-    <End Role="customer_address" Type="Self.customer_address" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="customers">
-        <PropertyRef Name="customer_id" />
-      </Principal>
-      <Dependent Role="customer_address">
-        <PropertyRef Name="customer_id" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__customer___custo__6C190EBB">
-    <End Role="customers" Type="Self.customers" Multiplicity="1" />
-    <End Role="customer_contact" Type="Self.customer_contact" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="customers">
-        <PropertyRef Name="customer_id" />
-      </Principal>
-      <Dependent Role="customer_contact">
-        <PropertyRef Name="customer_id" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__customers__addre__6A30C649">
-    <End Role="customer_address" Type="Self.customer_address" Multiplicity="1" />
-    <End Role="customers" Type="Self.customers" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="customer_address">
-        <PropertyRef Name="address_id" />
-      </Principal>
-      <Dependent Role="customers">
-        <PropertyRef Name="address_id" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK__inventory__categ__68487DD7">
     <End Role="product_category" Type="Self.product_category" Multiplicity="1" />
     <End Role="inventory" Type="Self.inventory" Multiplicity="*" />
@@ -156,8 +105,6 @@ warning 6002: The table/view 'eBIT.sys.database_firewall_rules' does not have a 
     </ReferentialConstraint>
   </Association>
   <EntityContainer Name="eBITModelStoreContainer">
-    <EntitySet Name="customer_address" EntityType="Self.customer_address" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="customer_contact" EntityType="Self.customer_contact" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="customers" EntityType="Self.customers" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="inventory" EntityType="Self.inventory" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="orders" EntityType="Self.orders" Schema="dbo" store:Type="Tables" />
@@ -173,18 +120,6 @@ warning 6002: The table/view 'eBIT.sys.database_firewall_rules' does not have a 
     [database_firewall_rules].[modify_date] AS [modify_date]
     FROM [sys].[database_firewall_rules] AS [database_firewall_rules]</DefiningQuery>
     </EntitySet>
-    <AssociationSet Name="FK__customer___custo__6B24EA82" Association="Self.FK__customer___custo__6B24EA82">
-      <End Role="customers" EntitySet="customers" />
-      <End Role="customer_address" EntitySet="customer_address" />
-    </AssociationSet>
-    <AssociationSet Name="FK__customer___custo__6C190EBB" Association="Self.FK__customer___custo__6C190EBB">
-      <End Role="customers" EntitySet="customers" />
-      <End Role="customer_contact" EntitySet="customer_contact" />
-    </AssociationSet>
-    <AssociationSet Name="FK__customers__addre__6A30C649" Association="Self.FK__customers__addre__6A30C649">
-      <End Role="customer_address" EntitySet="customer_address" />
-      <End Role="customers" EntitySet="customers" />
-    </AssociationSet>
     <AssociationSet Name="FK__inventory__categ__68487DD7" Association="Self.FK__inventory__categ__68487DD7">
       <End Role="product_category" EntitySet="product_category" />
       <End Role="inventory" EntitySet="inventory" />

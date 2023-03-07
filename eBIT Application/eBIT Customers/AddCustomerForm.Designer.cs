@@ -54,13 +54,11 @@
             this.customersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.customersTableAdapter = new eBIT_Customers.eBITCustomerDataSetTableAdapters.customersTableAdapter();
             this.customeraddressBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.customer_addressTableAdapter = new eBIT_Customers.eBITCustomerDataSetTableAdapters.customer_addressTableAdapter();
             this.customercontactBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.customer_contactTableAdapter = new eBIT_Customers.eBITCustomerDataSetTableAdapters.customer_contactTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.eBITCustomerDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customersBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customeraddressBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customercontactBindingSource)).BeginInit();
+            //((System.ComponentModel.ISupportInitialize)(this.customeraddressBindingSource)).BeginInit();
+            //((System.ComponentModel.ISupportInitialize)(this.customercontactBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // firstNameBox
@@ -89,7 +87,7 @@
             // 
             // address1Box
             // 
-            this.address1Box.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customeraddressBindingSource, "address_line_1", true));
+            this.address1Box.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customersBindingSource, "address_line_1", true));
             this.address1Box.Location = new System.Drawing.Point(160, 153);
             this.address1Box.Name = "address1Box";
             this.address1Box.Size = new System.Drawing.Size(490, 22);
@@ -97,7 +95,7 @@
             // 
             // address2Box
             // 
-            this.address2Box.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customeraddressBindingSource, "address_line_2", true));
+            this.address2Box.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customersBindingSource, "address_line_2", true));
             this.address2Box.Location = new System.Drawing.Point(160, 204);
             this.address2Box.Name = "address2Box";
             this.address2Box.Size = new System.Drawing.Size(490, 22);
@@ -105,7 +103,7 @@
             // 
             // cityBox
             // 
-            this.cityBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customeraddressBindingSource, "city", true));
+            this.cityBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customersBindingSource, "city", true));
             this.cityBox.Location = new System.Drawing.Point(160, 254);
             this.cityBox.Name = "cityBox";
             this.cityBox.Size = new System.Drawing.Size(148, 22);
@@ -113,7 +111,7 @@
             // 
             // zipBox
             // 
-            this.zipBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customeraddressBindingSource, "zip", true));
+            this.zipBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customersBindingSource, "zip", true));
             this.zipBox.Location = new System.Drawing.Point(550, 254);
             this.zipBox.Name = "zipBox";
             this.zipBox.Size = new System.Drawing.Size(100, 22);
@@ -181,7 +179,7 @@
             // 
             // emailBox
             // 
-            this.emailBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customercontactBindingSource, "email", true));
+            this.emailBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customersBindingSource, "email", true));
             this.emailBox.Location = new System.Drawing.Point(160, 303);
             this.emailBox.Name = "emailBox";
             this.emailBox.Size = new System.Drawing.Size(148, 22);
@@ -189,7 +187,7 @@
             // 
             // phoneBox
             // 
-            this.phoneBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customercontactBindingSource, "phone", true));
+            this.phoneBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customersBindingSource, "phone", true));
             this.phoneBox.Location = new System.Drawing.Point(502, 303);
             this.phoneBox.Name = "phoneBox";
             this.phoneBox.Size = new System.Drawing.Size(148, 22);
@@ -316,7 +314,6 @@
             // 
             // customer_addressTableAdapter
             // 
-            this.customer_addressTableAdapter.ClearBeforeFill = true;
             // 
             // customercontactBindingSource
             // 
@@ -325,7 +322,6 @@
             // 
             // customer_contactTableAdapter
             // 
-            this.customer_contactTableAdapter.ClearBeforeFill = true;
             // 
             // AddCustomer
             // 
@@ -358,8 +354,8 @@
             this.Load += new System.EventHandler(this.AddCustomer_Load);
             ((System.ComponentModel.ISupportInitialize)(this.eBITCustomerDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.customersBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customeraddressBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customercontactBindingSource)).EndInit();
+            //((System.ComponentModel.ISupportInitialize)(this.customeraddressBindingSource)).EndInit();
+            //((System.ComponentModel.ISupportInitialize)(this.customercontactBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -392,8 +388,6 @@
         private System.Windows.Forms.BindingSource customersBindingSource;
         private eBITCustomerDataSetTableAdapters.customersTableAdapter customersTableAdapter;
         private System.Windows.Forms.BindingSource customeraddressBindingSource;
-        private eBITCustomerDataSetTableAdapters.customer_addressTableAdapter customer_addressTableAdapter;
         private System.Windows.Forms.BindingSource customercontactBindingSource;
-        private eBITCustomerDataSetTableAdapters.customer_contactTableAdapter customer_contactTableAdapter;
     }
 }

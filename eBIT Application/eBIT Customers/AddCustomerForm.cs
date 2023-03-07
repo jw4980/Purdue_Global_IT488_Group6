@@ -17,21 +17,21 @@ namespace eBIT_Customers
         {
             InitializeComponent();
         }
-
+       
         private void AddCustomer_Load(object sender, EventArgs e)
         {
-            this.customer_contactTableAdapter.Fill(this.eBITCustomerDataSet.customer_contact);
-            // TODO: This line of code loads data into the 'eBITCustomerDataSet.customer_address' table. You can move, or remove it, as needed.
-            this.customer_addressTableAdapter.Fill(this.eBITCustomerDataSet.customer_address);
-            // TODO: This line of code loads data into the 'eBITCustomerDataSet.customers' table. You can move, or remove it, as needed.
-            this.customersTableAdapter.Fill(this.eBITCustomerDataSet.customers);
-
+            customersBindingSource.DataSource = new customer();            
+            //customersTableAdapter.Fill(this.eBITCustomerDataSet.customers);
         }
 
-        private void btnAddCust_Click(object sender, EventArgs e)
+        private async void btnAddCust_Click(object sender, EventArgs e)
         {
-
-            //Application.Run(new ViewCustomer());
+            db.customers.Add(customersBindingSource.Current as customer);
+            int i = await db.SaveChangesAsync();
+            if (i > 0) 
+            {
+                MessageBox.Show("Customer has been added successfully");
+            }
         }
     }
 }

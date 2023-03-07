@@ -1,37 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="eBITModelStoreContainer" CdmEntityContainer="eBITEntities">
-    <EntitySetMapping Name="customer_address">
-      <EntityTypeMapping TypeName="eBITModel.customer_address">
-        <MappingFragment StoreEntitySet="customer_address">
-          <ScalarProperty Name="address_id" ColumnName="address_id" />
-          <ScalarProperty Name="customer_id" ColumnName="customer_id" />
-          <ScalarProperty Name="address_line_1" ColumnName="address_line_1" />
-          <ScalarProperty Name="address_line_2" ColumnName="address_line_2" />
-          <ScalarProperty Name="city" ColumnName="city" />
-          <ScalarProperty Name="state" ColumnName="state" />
-          <ScalarProperty Name="zip" ColumnName="zip" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="customer_contact">
-      <EntityTypeMapping TypeName="eBITModel.customer_contact">
-        <MappingFragment StoreEntitySet="customer_contact">
-          <ScalarProperty Name="contact_id" ColumnName="contact_id" />
-          <ScalarProperty Name="customer_id" ColumnName="customer_id" />
-          <ScalarProperty Name="phone" ColumnName="phone" />
-          <ScalarProperty Name="email" ColumnName="email" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="customers">
       <EntityTypeMapping TypeName="eBITModel.customer">
         <MappingFragment StoreEntitySet="customers">
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="zip" ColumnName="zip" />
+          <ScalarProperty Name="state" ColumnName="state" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="address_line_2" ColumnName="address_line_2" />
+          <ScalarProperty Name="address_line_1" ColumnName="address_line_1" />
           <ScalarProperty Name="customer_id" ColumnName="customer_id" />
           <ScalarProperty Name="first_name" ColumnName="first_name" />
           <ScalarProperty Name="last_name" ColumnName="last_name" />
           <ScalarProperty Name="ebay_username" ColumnName="ebay_username" />
-          <ScalarProperty Name="address_id" ColumnName="address_id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

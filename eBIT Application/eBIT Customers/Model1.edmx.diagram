@@ -5,17 +5,12 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="925cc3ba6aac47a2a3aa0aed37d3ac6b" Name="Diagram1">
-        <EntityTypeShape EntityType="eBITModel.customer_address" Width="1.5" PointX="3" PointY="1.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="eBITModel.customer_contact" Width="1.5" PointX="3" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="eBITModel.customer" Width="1.5" PointX="0.75" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="eBITModel.customer" Width="1.5" PointX="2.625" PointY="2.75" IsExpanded="true" />
         <EntityTypeShape EntityType="eBITModel.inventory" Width="1.5" PointX="8" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="eBITModel.order" Width="1.5" PointX="3" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="eBITModel.order" Width="1.5" PointX="3.375" PointY="6.75" IsExpanded="true" />
         <EntityTypeShape EntityType="eBITModel.product_category" Width="1.5" PointX="5.75" PointY="1.5" IsExpanded="true" />
         <EntityTypeShape EntityType="eBITModel.user" Width="1.5" PointX="5.75" PointY="4.75" IsExpanded="true" />
         <EntityTypeShape EntityType="eBITModel.database_firewall_rules" Width="1.5" PointX="7.75" PointY="4.75" IsExpanded="true" />
-        <AssociationConnector Association="eBITModel.FK__customer___custo__6B24EA82" ManuallyRouted="false" />
-        <AssociationConnector Association="eBITModel.FK__customers__addre__6A30C649" ManuallyRouted="false" />
-        <AssociationConnector Association="eBITModel.FK__customer___custo__6C190EBB" ManuallyRouted="false" />
         <AssociationConnector Association="eBITModel.FK__orders__customer__693CA210" ManuallyRouted="false" />
         <AssociationConnector Association="eBITModel.FK__inventory__categ__68487DD7" ManuallyRouted="false" />
       </Diagram>

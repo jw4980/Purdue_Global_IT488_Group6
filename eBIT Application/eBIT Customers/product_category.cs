@@ -17,7 +17,7 @@ namespace eBIT_Customers
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public product_category()
         {
-            this.inventories = new ObservableListSource<inventory>();
+            this.inventories = new HashSet<inventory>();
         }
     
         public int category_id { get; set; }

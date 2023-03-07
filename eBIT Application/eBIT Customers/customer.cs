@@ -17,22 +17,21 @@ namespace eBIT_Customers
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public customer()
         {
-            this.customer_address = new ObservableListSource<customer_address>();
-            this.customer_contact = new ObservableListSource<customer_contact>();
-            this.orders = new ObservableListSource<order>();
+            this.orders = new HashSet<order>();
         }
     
         public int customer_id { get; set; }
         public string first_name { get; set; }
         public string last_name { get; set; }
         public string ebay_username { get; set; }
-        public int address_id { get; set; }
+        public string address_line_1 { get; set; }
+        public string address_line_2 { get; set; }
+        public string city { get; set; }
+        public string state { get; set; }
+        public short zip { get; set; }
+        public int phone { get; set; }
+        public string email { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<customer_address> customer_address { get; set; }
-        public virtual customer_address customer_address1 { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<customer_contact> customer_contact { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<order> orders { get; set; }
     }

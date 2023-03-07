@@ -25,8 +25,6 @@ namespace eBIT_Customers
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<customer_address> customer_address { get; set; }
-        public virtual DbSet<customer_contact> customer_contact { get; set; }
         public virtual DbSet<customer> customers { get; set; }
         public virtual DbSet<inventory> inventories { get; set; }
         public virtual DbSet<order> orders { get; set; }

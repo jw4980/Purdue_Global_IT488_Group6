@@ -1,29 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="eBITModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-  <EntityType Name="customer_address">
-    <Key>
-      <PropertyRef Name="address_id" />
-    </Key>
-    <Property Name="address_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="customer_id" Type="Int32" Nullable="false" />
-    <Property Name="address_line_1" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="address_line_2" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Name="city" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="state" Type="String" MaxLength="2" FixedLength="true" Unicode="false" Nullable="false" />
-    <Property Name="zip" Type="Int16" Nullable="false" />
-    <NavigationProperty Name="customer" Relationship="Self.FK__customer___custo__6B24EA82" FromRole="customer_address" ToRole="customers" />
-    <NavigationProperty Name="customers" Relationship="Self.FK__customers__addre__6A30C649" FromRole="customer_address" ToRole="customers" />
-  </EntityType>
-  <EntityType Name="customer_contact">
-    <Key>
-      <PropertyRef Name="contact_id" />
-    </Key>
-    <Property Name="contact_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="customer_id" Type="Int32" Nullable="false" />
-    <Property Name="phone" Type="Int32" Nullable="false" />
-    <Property Name="email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
-    <NavigationProperty Name="customer" Relationship="Self.FK__customer___custo__6C190EBB" FromRole="customer_contact" ToRole="customers" />
-  </EntityType>
   <EntityType Name="customer">
     <Key>
       <PropertyRef Name="customer_id" />
@@ -32,11 +8,14 @@
     <Property Name="first_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="last_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="ebay_username" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="address_id" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="customer_address" Relationship="Self.FK__customer___custo__6B24EA82" FromRole="customers" ToRole="customer_address" />
-    <NavigationProperty Name="customer_address1" Relationship="Self.FK__customers__addre__6A30C649" FromRole="customers" ToRole="customer_address" />
-    <NavigationProperty Name="customer_contact" Relationship="Self.FK__customer___custo__6C190EBB" FromRole="customers" ToRole="customer_contact" />
     <NavigationProperty Name="orders" Relationship="Self.FK__orders__customer__693CA210" FromRole="customers" ToRole="orders" />
+    <Property Name="address_line_1" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="address_line_2" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="city" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="state" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="zip" Type="Int16" Nullable="false" />
+    <Property Name="phone" Type="Int32" Nullable="false" />
+    <Property Name="email" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="inventory">
     <Key>
@@ -49,8 +28,8 @@
     <Property Name="list_price" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
     <Property Name="item_cost" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
     <Property Name="item_image" Type="Binary" MaxLength="Max" FixedLength="false" />
-    <Property Name="sale_start" Type="DateTime" Nullable="false" />
-    <Property Name="sale_end" Type="DateTime" Nullable="false" />
+    <Property Name="sale_start" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="sale_end" Type="DateTime" Nullable="false" Precision="3" />
     <NavigationProperty Name="product_category" Relationship="Self.FK__inventory__categ__68487DD7" FromRole="inventory" ToRole="product_category" />
   </EntityType>
   <EntityType Name="order">
@@ -100,45 +79,9 @@
     <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="start_ip_address" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="end_ip_address" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="create_date" Type="DateTime" Nullable="false" />
-    <Property Name="modify_date" Type="DateTime" Nullable="false" />
+    <Property Name="create_date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="modify_date" Type="DateTime" Nullable="false" Precision="3" />
   </EntityType>
-  <Association Name="FK__customer___custo__6B24EA82">
-    <End Role="customers" Type="Self.customer" Multiplicity="1" />
-    <End Role="customer_address" Type="Self.customer_address" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="customers">
-        <PropertyRef Name="customer_id" />
-      </Principal>
-      <Dependent Role="customer_address">
-        <PropertyRef Name="customer_id" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__customers__addre__6A30C649">
-    <End Role="customer_address" Type="Self.customer_address" Multiplicity="1" />
-    <End Role="customers" Type="Self.customer" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="customer_address">
-        <PropertyRef Name="address_id" />
-      </Principal>
-      <Dependent Role="customers">
-        <PropertyRef Name="address_id" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__customer___custo__6C190EBB">
-    <End Role="customers" Type="Self.customer" Multiplicity="1" />
-    <End Role="customer_contact" Type="Self.customer_contact" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="customers">
-        <PropertyRef Name="customer_id" />
-      </Principal>
-      <Dependent Role="customer_contact">
-        <PropertyRef Name="customer_id" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK__orders__customer__693CA210">
     <End Role="customers" Type="Self.customer" Multiplicity="1" />
     <End Role="orders" Type="Self.order" Multiplicity="*" />
@@ -164,26 +107,12 @@
     </ReferentialConstraint>
   </Association>
   <EntityContainer Name="eBITEntities" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="customer_address" EntityType="Self.customer_address" />
-    <EntitySet Name="customer_contact" EntityType="Self.customer_contact" />
     <EntitySet Name="customers" EntityType="Self.customer" />
     <EntitySet Name="inventories" EntityType="Self.inventory" />
     <EntitySet Name="orders" EntityType="Self.order" />
     <EntitySet Name="product_category" EntityType="Self.product_category" />
     <EntitySet Name="users" EntityType="Self.user" />
     <EntitySet Name="database_firewall_rules" EntityType="Self.database_firewall_rules" />
-    <AssociationSet Name="FK__customer___custo__6B24EA82" Association="Self.FK__customer___custo__6B24EA82">
-      <End Role="customers" EntitySet="customers" />
-      <End Role="customer_address" EntitySet="customer_address" />
-    </AssociationSet>
-    <AssociationSet Name="FK__customers__addre__6A30C649" Association="Self.FK__customers__addre__6A30C649">
-      <End Role="customer_address" EntitySet="customer_address" />
-      <End Role="customers" EntitySet="customers" />
-    </AssociationSet>
-    <AssociationSet Name="FK__customer___custo__6C190EBB" Association="Self.FK__customer___custo__6C190EBB">
-      <End Role="customers" EntitySet="customers" />
-      <End Role="customer_contact" EntitySet="customer_contact" />
-    </AssociationSet>
     <AssociationSet Name="FK__orders__customer__693CA210" Association="Self.FK__orders__customer__693CA210">
       <End Role="customers" EntitySet="customers" />
       <End Role="orders" EntitySet="orders" />
