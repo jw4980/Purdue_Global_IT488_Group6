@@ -19,6 +19,10 @@ namespace eBIT_Application
 
         private void AddInventory_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'eBITDataSet.inventory' table. You can move, or remove it, as needed.
+            this.inventoryTableAdapter.Fill(this.eBITDataSet.inventory);
+            // TODO: This line of code loads data into the 'eBITDataSet.product_category' table. You can move, or remove it, as needed.
+            this.product_categoryTableAdapter.Fill(this.eBITDataSet.product_category);
             inventoryBindingSource.DataSource = new inventory();
         }
 
@@ -32,7 +36,7 @@ namespace eBIT_Application
             }
 
             eBITEntities db = new eBITEntities();
-            db.inventories.Add(inventoryBindingSource.Current as inventory);
+            db.inventories.Add(inventoryBindingSource.Current as inventory);            
             int result = db.SaveChanges();
             if (result > 0)
                 MessageBox.Show("Data has been entered successfully");
