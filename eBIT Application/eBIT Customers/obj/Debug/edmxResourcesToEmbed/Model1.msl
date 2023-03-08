@@ -4,8 +4,8 @@
     <EntitySetMapping Name="customers">
       <EntityTypeMapping TypeName="eBITModel.customer">
         <MappingFragment StoreEntitySet="customers">
-          <ScalarProperty Name="email" ColumnName="email" />
           <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="email" ColumnName="email" />
           <ScalarProperty Name="zip" ColumnName="zip" />
           <ScalarProperty Name="state" ColumnName="state" />
           <ScalarProperty Name="city" ColumnName="city" />

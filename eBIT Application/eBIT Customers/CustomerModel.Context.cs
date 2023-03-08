@@ -13,10 +13,10 @@ namespace eBIT_Customers
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class eBITEntities : DbContext
+    public partial class eBITEntities1 : DbContext
     {
-        public eBITEntities()
-            : base("name=eBITEntities")
+        public eBITEntities1()
+            : base("name=eBITEntities1")
         {
         }
     
@@ -26,10 +26,6 @@ namespace eBIT_Customers
         }
     
         public virtual DbSet<customer> customers { get; set; }
-        public virtual DbSet<inventory> inventories { get; set; }
-        public virtual DbSet<order> orders { get; set; }
-        public virtual DbSet<product_category> product_category { get; set; }
-        public virtual DbSet<user> users { get; set; }
         public virtual DbSet<database_firewall_rules> database_firewall_rules { get; set; }
     }
 }

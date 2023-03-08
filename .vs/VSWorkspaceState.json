@@ -1,7 +1,16 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\eBIT Application",
+    "\\eBIT Application\\eBIT Application",
+    "\\eBIT Application\\eBIT Application\\obj",
+    "\\eBIT Application\\eBIT Application\\obj\\Release",
+    "\\Purdue_Global_IT488_Group6-main",
+    "\\Purdue_Global_IT488_Group6-main\\Purdue_Global_IT488_Group6-main",
+    "\\Purdue_Global_IT488_Group6-main\\Purdue_Global_IT488_Group6-main\\eBIT Application",
+    "\\Purdue_Global_IT488_Group6-main\\Purdue_Global_IT488_Group6-main\\eBIT Application\\eBIT Application",
+    "\\Purdue_Global_IT488_Group6-main\\Purdue_Global_IT488_Group6-main\\eBIT Application\\eBIT Application\\obj"
   ],
-  "SelectedNode": "\\eBIT Customers.sln",
+  "SelectedNode": "\\Purdue_Global_IT488_Group6-main\\Purdue_Global_IT488_Group6-main\\eBIT Application\\eBIT Application\\obj\\Debug",
   "PreviewInSolutionExplorer": false
 }

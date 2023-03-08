@@ -12,8 +12,8 @@
     <Property Name="address_line_2" Type="varchar" MaxLength="255" />
     <Property Name="city" Type="varchar" MaxLength="100" Nullable="false" />
     <Property Name="state" Type="char" MaxLength="2" Nullable="false" />
-    <Property Name="zip" Type="smallint" Nullable="false" />
-    <Property Name="phone" Type="int" Nullable="false" />
+    <Property Name="zip" Type="int" Nullable="false" />
+    <Property Name="phone" Type="bigint" Nullable="false" />
     <Property Name="email" Type="varchar" MaxLength="255" Nullable="false" />
   </EntityType>
   <EntityType Name="inventory">

@@ -1,6 +1,5 @@
 C:\Users\dsmit\source\repos\jw4980\Purdue_Global_IT488_Group6\eBIT Application\eBIT Customers\obj\Debug\eBIT Customers.csproj.AssemblyReference.cache
 C:\Users\dsmit\source\repos\jw4980\Purdue_Global_IT488_Group6\eBIT Application\eBIT Customers\obj\Debug\eBIT Customers.csproj.SuggestedBindingRedirects.cache
-C:\Users\dsmit\source\repos\jw4980\Purdue_Global_IT488_Group6\eBIT Application\eBIT Customers\obj\Debug\eBIT_Customers.AddCustomerForm.resources
 C:\Users\dsmit\source\repos\jw4980\Purdue_Global_IT488_Group6\eBIT Application\eBIT Customers\obj\Debug\eBIT_Customers.Properties.Resources.resources
 C:\Users\dsmit\source\repos\jw4980\Purdue_Global_IT488_Group6\eBIT Application\eBIT Customers\obj\Debug\eBIT_Customers.ViewCustomer.resources
 C:\Users\dsmit\source\repos\jw4980\Purdue_Global_IT488_Group6\eBIT Application\eBIT Customers\obj\Debug\eBIT Customers.csproj.GenerateResource.cache

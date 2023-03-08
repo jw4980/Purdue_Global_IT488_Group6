@@ -8,6 +8,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
+
+//This was a prototype form for adding a new customer record to the database.
+//
+
+
 namespace eBIT_Customers
 {
     public partial class AddCustomerForm : Form

@@ -13,7 +13,7 @@ namespace eBIT_Customers
 {
     public partial class ViewCustomer : Form
     {
-        eBITEntities _context = new eBITEntities();
+        eBITEntities1 _context = new eBITEntities1();
 
         public ViewCustomer()
         {
@@ -53,10 +53,15 @@ namespace eBIT_Customers
 
         private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
         {
-            Application.Run(new AddCustomerForm());
+            customersBindingSource.AddNew();
         }
 
         private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void customersDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

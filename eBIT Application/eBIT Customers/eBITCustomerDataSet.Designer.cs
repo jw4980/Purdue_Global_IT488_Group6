@@ -459,7 +459,7 @@ namespace eBIT_Customers {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public customersRow AddcustomersRow(string first_name, string last_name, string ebay_username, string address_line_1, string address_line_2, string city, string state, short zip, int phone, string email) {
+            public customersRow AddcustomersRow(string first_name, string last_name, string ebay_username, string address_line_1, string address_line_2, string city, string state, int zip, long phone, string email) {
                 customersRow rowcustomersRow = ((customersRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -534,9 +534,9 @@ namespace eBIT_Customers {
                 base.Columns.Add(this.columncity);
                 this.columnstate = new global::System.Data.DataColumn("state", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnstate);
-                this.columnzip = new global::System.Data.DataColumn("zip", typeof(short), null, global::System.Data.MappingType.Element);
+                this.columnzip = new global::System.Data.DataColumn("zip", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnzip);
-                this.columnphone = new global::System.Data.DataColumn("phone", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnphone = new global::System.Data.DataColumn("phone", typeof(long), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnphone);
                 this.columnemail = new global::System.Data.DataColumn("email", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnemail);
@@ -800,9 +800,9 @@ namespace eBIT_Customers {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public short zip {
+            public int zip {
                 get {
-                    return ((short)(this[this.tablecustomers.zipColumn]));
+                    return ((int)(this[this.tablecustomers.zipColumn]));
                 }
                 set {
                     this[this.tablecustomers.zipColumn] = value;
@@ -811,9 +811,9 @@ namespace eBIT_Customers {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int phone {
+            public long phone {
                 get {
-                    return ((int)(this[this.tablecustomers.phoneColumn]));
+                    return ((long)(this[this.tablecustomers.phoneColumn]));
                 }
                 set {
                     this[this.tablecustomers.phoneColumn] = value;
