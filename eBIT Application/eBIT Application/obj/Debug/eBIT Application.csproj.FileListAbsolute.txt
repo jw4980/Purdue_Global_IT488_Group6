@@ -62,3 +62,6 @@ C:\Users\donnr\Source\Repos\Purdue_Global_IT488_Group6-1\eBIT Application\eBIT A
 C:\Users\donnr\Source\Repos\Purdue_Global_IT488_Group6-1\eBIT Application\eBIT Application\obj\Debug\eBIT Application.csproj.CopyComplete
 C:\Users\donnr\Source\Repos\Purdue_Global_IT488_Group6-1\eBIT Application\eBIT Application\obj\Debug\eBIT Application.exe
 C:\Users\donnr\Source\Repos\Purdue_Global_IT488_Group6-1\eBIT Application\eBIT Application\obj\Debug\eBIT Application.pdb
+C:\Users\donnr\Source\Repos\Purdue_Global_IT488_Group6\eBIT Application\eBIT Application\obj\Debug\eBIT_Application.AddSale.resources
+C:\Users\donnr\Source\Repos\Purdue_Global_IT488_Group6\eBIT Application\eBIT Application\obj\Debug\eBIT_Application.ViewCategory.resources
+C:\Users\donnr\Source\Repos\Purdue_Global_IT488_Group6\eBIT Application\eBIT Application\obj\Debug\eBIT_Application.AddCategory.resources
