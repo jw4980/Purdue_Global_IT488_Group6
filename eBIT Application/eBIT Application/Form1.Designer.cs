@@ -31,250 +31,228 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label category_idLabel;
             System.Windows.Forms.Label item_costLabel;
+            System.Windows.Forms.Label item_descLabel;
             System.Windows.Forms.Label item_idLabel;
-            System.Windows.Forms.Label item_imageLabel;
             System.Windows.Forms.Label item_quantityLabel;
             System.Windows.Forms.Label list_priceLabel;
             System.Windows.Forms.Label sale_endLabel;
             System.Windows.Forms.Label sale_startLabel;
-            System.Windows.Forms.Label item_nameLabel;
             this.category_idTextBox = new System.Windows.Forms.TextBox();
-            this.inventoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.item_costTextBox = new System.Windows.Forms.TextBox();
+            this.item_descTextBox = new System.Windows.Forms.TextBox();
             this.item_idTextBox = new System.Windows.Forms.TextBox();
-            this.item_imageTextBox = new System.Windows.Forms.TextBox();
             this.item_quantityTextBox = new System.Windows.Forms.TextBox();
             this.list_priceTextBox = new System.Windows.Forms.TextBox();
             this.sale_endDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.sale_startDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.labelTitle = new System.Windows.Forms.Label();
             this.buttonAdd = new System.Windows.Forms.Button();
-            this.item_nameTextBox = new System.Windows.Forms.TextBox();
+            this.inventoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
             category_idLabel = new System.Windows.Forms.Label();
             item_costLabel = new System.Windows.Forms.Label();
+            item_descLabel = new System.Windows.Forms.Label();
             item_idLabel = new System.Windows.Forms.Label();
-            item_imageLabel = new System.Windows.Forms.Label();
             item_quantityLabel = new System.Windows.Forms.Label();
             list_priceLabel = new System.Windows.Forms.Label();
             sale_endLabel = new System.Windows.Forms.Label();
             sale_startLabel = new System.Windows.Forms.Label();
-            item_nameLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.inventoryBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // category_idLabel
             // 
             category_idLabel.AutoSize = true;
-            category_idLabel.Location = new System.Drawing.Point(38, 44);
-            category_idLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            category_idLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            category_idLabel.Location = new System.Drawing.Point(303, 90);
             category_idLabel.Name = "category_idLabel";
-            category_idLabel.Size = new System.Drawing.Size(62, 13);
+            category_idLabel.Size = new System.Drawing.Size(108, 23);
             category_idLabel.TabIndex = 1;
-            category_idLabel.Text = "category id:";
+            category_idLabel.Text = "Category:";
             // 
             // item_costLabel
             // 
             item_costLabel.AutoSize = true;
-            item_costLabel.Location = new System.Drawing.Point(38, 67);
-            item_costLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            item_costLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            item_costLabel.Location = new System.Drawing.Point(15, 210);
             item_costLabel.Name = "item_costLabel";
-            item_costLabel.Size = new System.Drawing.Size(52, 13);
+            item_costLabel.Size = new System.Drawing.Size(59, 23);
             item_costLabel.TabIndex = 3;
-            item_costLabel.Text = "item cost:";
+            item_costLabel.Text = "Cost:";
+            // 
+            // item_descLabel
+            // 
+            item_descLabel.AutoSize = true;
+            item_descLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            item_descLabel.Location = new System.Drawing.Point(15, 150);
+            item_descLabel.Name = "item_descLabel";
+            item_descLabel.Size = new System.Drawing.Size(122, 23);
+            item_descLabel.TabIndex = 5;
+            item_descLabel.Text = "Description:";
             // 
             // item_idLabel
             // 
             item_idLabel.AutoSize = true;
-            item_idLabel.Location = new System.Drawing.Point(38, 131);
-            item_idLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            item_idLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            item_idLabel.Location = new System.Drawing.Point(15, 90);
             item_idLabel.Name = "item_idLabel";
-            item_idLabel.Size = new System.Drawing.Size(40, 13);
+            item_idLabel.Size = new System.Drawing.Size(85, 23);
             item_idLabel.TabIndex = 7;
-            item_idLabel.Text = "item id:";
-            // 
-            // item_imageLabel
-            // 
-            item_imageLabel.AutoSize = true;
-            item_imageLabel.Location = new System.Drawing.Point(38, 199);
-            item_imageLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            item_imageLabel.Name = "item_imageLabel";
-            item_imageLabel.Size = new System.Drawing.Size(60, 13);
-            item_imageLabel.TabIndex = 9;
-            item_imageLabel.Text = "item image:";
+            item_idLabel.Text = "Item ID:";
             // 
             // item_quantityLabel
             // 
             item_quantityLabel.AutoSize = true;
-            item_quantityLabel.Location = new System.Drawing.Point(38, 164);
-            item_quantityLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            item_quantityLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            item_quantityLabel.Location = new System.Drawing.Point(398, 210);
             item_quantityLabel.Name = "item_quantityLabel";
-            item_quantityLabel.Size = new System.Drawing.Size(69, 13);
+            item_quantityLabel.Size = new System.Drawing.Size(98, 23);
             item_quantityLabel.TabIndex = 11;
-            item_quantityLabel.Text = "item quantity:";
+            item_quantityLabel.Text = "Quantity:";
             // 
             // list_priceLabel
             // 
             list_priceLabel.AutoSize = true;
-            list_priceLabel.Location = new System.Drawing.Point(212, 69);
-            list_priceLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            list_priceLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            list_priceLabel.Location = new System.Drawing.Point(184, 210);
             list_priceLabel.Name = "list_priceLabel";
-            list_priceLabel.Size = new System.Drawing.Size(48, 13);
+            list_priceLabel.Size = new System.Drawing.Size(101, 23);
             list_priceLabel.TabIndex = 13;
-            list_priceLabel.Text = "list price:";
+            list_priceLabel.Text = "Sell Price:";
             // 
             // sale_endLabel
             // 
             sale_endLabel.AutoSize = true;
-            sale_endLabel.Location = new System.Drawing.Point(299, 251);
-            sale_endLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            sale_endLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            sale_endLabel.Location = new System.Drawing.Point(93, 320);
             sale_endLabel.Name = "sale_endLabel";
-            sale_endLabel.Size = new System.Drawing.Size(50, 13);
+            sale_endLabel.Size = new System.Drawing.Size(100, 23);
             sale_endLabel.TabIndex = 15;
-            sale_endLabel.Text = "sale end:";
+            sale_endLabel.Text = "Sale End:";
             // 
             // sale_startLabel
             // 
             sale_startLabel.AutoSize = true;
-            sale_startLabel.Location = new System.Drawing.Point(38, 249);
-            sale_startLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            sale_startLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            sale_startLabel.Location = new System.Drawing.Point(93, 272);
             sale_startLabel.Name = "sale_startLabel";
-            sale_startLabel.Size = new System.Drawing.Size(52, 13);
+            sale_startLabel.Size = new System.Drawing.Size(107, 23);
             sale_startLabel.TabIndex = 17;
-            sale_startLabel.Text = "sale start:";
-            // 
-            // item_nameLabel
-            // 
-            item_nameLabel.AutoSize = true;
-            item_nameLabel.Location = new System.Drawing.Point(37, 96);
-            item_nameLabel.Name = "item_nameLabel";
-            item_nameLabel.Size = new System.Drawing.Size(58, 13);
-            item_nameLabel.TabIndex = 20;
-            item_nameLabel.Text = "item name:";
+            sale_startLabel.Text = "Sale Start:";
             // 
             // category_idTextBox
             // 
             this.category_idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.inventoryBindingSource, "category_id", true));
-            this.category_idTextBox.Location = new System.Drawing.Point(106, 41);
-            this.category_idTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.category_idTextBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.category_idTextBox.Location = new System.Drawing.Point(428, 87);
             this.category_idTextBox.Name = "category_idTextBox";
-            this.category_idTextBox.Size = new System.Drawing.Size(69, 20);
+            this.category_idTextBox.Size = new System.Drawing.Size(143, 32);
             this.category_idTextBox.TabIndex = 2;
-            // 
-            // inventoryBindingSource
-            // 
-            this.inventoryBindingSource.DataSource = typeof(eBIT_Application.inventory);
             // 
             // item_costTextBox
             // 
             this.item_costTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.inventoryBindingSource, "item_cost", true));
-            this.item_costTextBox.Location = new System.Drawing.Point(106, 67);
-            this.item_costTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.item_costTextBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.item_costTextBox.Location = new System.Drawing.Point(80, 207);
             this.item_costTextBox.Name = "item_costTextBox";
-            this.item_costTextBox.Size = new System.Drawing.Size(74, 20);
+            this.item_costTextBox.Size = new System.Drawing.Size(93, 32);
             this.item_costTextBox.TabIndex = 4;
+            // 
+            // item_descTextBox
+            // 
+            this.item_descTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.inventoryBindingSource, "item_desc", true));
+            this.item_descTextBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.item_descTextBox.Location = new System.Drawing.Point(140, 141);
+            this.item_descTextBox.Name = "item_descTextBox";
+            this.item_descTextBox.Size = new System.Drawing.Size(431, 32);
+            this.item_descTextBox.TabIndex = 6;
             // 
             // item_idTextBox
             // 
             this.item_idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.inventoryBindingSource, "item_id", true));
-            this.item_idTextBox.Location = new System.Drawing.Point(106, 129);
-            this.item_idTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.item_idTextBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.item_idTextBox.Location = new System.Drawing.Point(106, 87);
             this.item_idTextBox.Name = "item_idTextBox";
-            this.item_idTextBox.Size = new System.Drawing.Size(74, 20);
+            this.item_idTextBox.Size = new System.Drawing.Size(151, 32);
             this.item_idTextBox.TabIndex = 8;
-            // 
-            // item_imageTextBox
-            // 
-            this.item_imageTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.inventoryBindingSource, "item_image", true));
-            this.item_imageTextBox.Location = new System.Drawing.Point(112, 196);
-            this.item_imageTextBox.Margin = new System.Windows.Forms.Padding(2);
-            this.item_imageTextBox.MaximumSize = new System.Drawing.Size(2251, 3000);
-            this.item_imageTextBox.Name = "item_imageTextBox";
-            this.item_imageTextBox.Size = new System.Drawing.Size(110, 20);
-            this.item_imageTextBox.TabIndex = 10;
             // 
             // item_quantityTextBox
             // 
             this.item_quantityTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.inventoryBindingSource, "item_quantity", true));
-            this.item_quantityTextBox.Location = new System.Drawing.Point(106, 164);
-            this.item_quantityTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.item_quantityTextBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.item_quantityTextBox.Location = new System.Drawing.Point(502, 207);
             this.item_quantityTextBox.Name = "item_quantityTextBox";
-            this.item_quantityTextBox.Size = new System.Drawing.Size(74, 20);
+            this.item_quantityTextBox.Size = new System.Drawing.Size(69, 32);
             this.item_quantityTextBox.TabIndex = 12;
             // 
             // list_priceTextBox
             // 
             this.list_priceTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.inventoryBindingSource, "list_price", true));
-            this.list_priceTextBox.Location = new System.Drawing.Point(268, 64);
-            this.list_priceTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.list_priceTextBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.list_priceTextBox.Location = new System.Drawing.Point(291, 207);
             this.list_priceTextBox.Name = "list_priceTextBox";
-            this.list_priceTextBox.Size = new System.Drawing.Size(151, 20);
+            this.list_priceTextBox.Size = new System.Drawing.Size(101, 32);
             this.list_priceTextBox.TabIndex = 14;
             // 
             // sale_endDateTimePicker
             // 
             this.sale_endDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.inventoryBindingSource, "sale_end", true));
-            this.sale_endDateTimePicker.Location = new System.Drawing.Point(380, 249);
-            this.sale_endDateTimePicker.Margin = new System.Windows.Forms.Padding(2);
+            this.sale_endDateTimePicker.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sale_endDateTimePicker.Location = new System.Drawing.Point(219, 316);
             this.sale_endDateTimePicker.Name = "sale_endDateTimePicker";
-            this.sale_endDateTimePicker.Size = new System.Drawing.Size(151, 20);
+            this.sale_endDateTimePicker.Size = new System.Drawing.Size(299, 28);
             this.sale_endDateTimePicker.TabIndex = 16;
             // 
             // sale_startDateTimePicker
             // 
             this.sale_startDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.inventoryBindingSource, "sale_start", true));
-            this.sale_startDateTimePicker.Location = new System.Drawing.Point(106, 246);
-            this.sale_startDateTimePicker.Margin = new System.Windows.Forms.Padding(2);
+            this.sale_startDateTimePicker.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sale_startDateTimePicker.Location = new System.Drawing.Point(219, 268);
             this.sale_startDateTimePicker.Name = "sale_startDateTimePicker";
-            this.sale_startDateTimePicker.Size = new System.Drawing.Size(151, 20);
+            this.sale_startDateTimePicker.Size = new System.Drawing.Size(299, 28);
             this.sale_startDateTimePicker.TabIndex = 18;
             // 
             // labelTitle
             // 
+            this.labelTitle.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.labelTitle.AutoSize = true;
-            this.labelTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTitle.Location = new System.Drawing.Point(36, 7);
-            this.labelTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelTitle.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTitle.Location = new System.Drawing.Point(105, 9);
             this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(310, 26);
+            this.labelTitle.Size = new System.Drawing.Size(378, 34);
             this.labelTitle.TabIndex = 19;
-            this.labelTitle.Text = "Enter Inventory Data Below:";
+            this.labelTitle.Text = "Enter Inventory Data Below";
             // 
             // buttonAdd
             // 
-            this.buttonAdd.Location = new System.Drawing.Point(40, 285);
-            this.buttonAdd.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonAdd.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.buttonAdd.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAdd.Location = new System.Drawing.Point(252, 368);
             this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(56, 19);
+            this.buttonAdd.Size = new System.Drawing.Size(81, 43);
             this.buttonAdd.TabIndex = 20;
             this.buttonAdd.Text = "Insert";
             this.buttonAdd.UseVisualStyleBackColor = true;
             this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
-            // item_nameTextBox
+            // inventoryBindingSource
             // 
-            this.item_nameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.inventoryBindingSource, "item_name", true));
-            this.item_nameTextBox.Location = new System.Drawing.Point(101, 96);
-            this.item_nameTextBox.Name = "item_nameTextBox";
-            this.item_nameTextBox.Size = new System.Drawing.Size(100, 20);
-            this.item_nameTextBox.TabIndex = 21;
+            this.inventoryBindingSource.DataSource = typeof(eBIT_Application.inventory);
             // 
             // AddInventory
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(600, 366);
-            this.Controls.Add(item_nameLabel);
-            this.Controls.Add(this.item_nameTextBox);
+            this.ClientSize = new System.Drawing.Size(609, 435);
             this.Controls.Add(this.buttonAdd);
             this.Controls.Add(this.labelTitle);
             this.Controls.Add(category_idLabel);
             this.Controls.Add(this.category_idTextBox);
             this.Controls.Add(item_costLabel);
             this.Controls.Add(this.item_costTextBox);
+            this.Controls.Add(item_descLabel);
+            this.Controls.Add(this.item_descTextBox);
             this.Controls.Add(item_idLabel);
             this.Controls.Add(this.item_idTextBox);
-            this.Controls.Add(item_imageLabel);
-            this.Controls.Add(this.item_imageTextBox);
             this.Controls.Add(item_quantityLabel);
             this.Controls.Add(this.item_quantityTextBox);
             this.Controls.Add(list_priceLabel);
@@ -283,8 +261,8 @@
             this.Controls.Add(this.sale_endDateTimePicker);
             this.Controls.Add(sale_startLabel);
             this.Controls.Add(this.sale_startDateTimePicker);
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AddInventory";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add Inventory";
             this.Load += new System.EventHandler(this.AddInventory_Load);
             ((System.ComponentModel.ISupportInitialize)(this.inventoryBindingSource)).EndInit();
@@ -298,15 +276,14 @@
         private System.Windows.Forms.BindingSource inventoryBindingSource;
         private System.Windows.Forms.TextBox category_idTextBox;
         private System.Windows.Forms.TextBox item_costTextBox;
+        private System.Windows.Forms.TextBox item_descTextBox;
         private System.Windows.Forms.TextBox item_idTextBox;
-        private System.Windows.Forms.TextBox item_imageTextBox;
         private System.Windows.Forms.TextBox item_quantityTextBox;
         private System.Windows.Forms.TextBox list_priceTextBox;
         private System.Windows.Forms.DateTimePicker sale_endDateTimePicker;
         private System.Windows.Forms.DateTimePicker sale_startDateTimePicker;
         private System.Windows.Forms.Label labelTitle;
         private System.Windows.Forms.Button buttonAdd;
-        private System.Windows.Forms.TextBox item_nameTextBox;
     }
 }
 

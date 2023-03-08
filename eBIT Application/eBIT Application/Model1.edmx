@@ -216,9 +216,9 @@
         <EntityContainer Name="eBITEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="inventories" EntityType="Self.inventory" />
           <EntitySet Name="orders" EntityType="Self.order" />
-          <EntitySet Name="product_categories" EntityType="Self.product_category" />
+          <EntitySet Name="product_category" EntityType="Self.product_category" />
           <AssociationSet Name="FK__inventory__categ__68487DD7" Association="eBITModel.FK__inventory__categ__68487DD7">
-            <End Role="product_category" EntitySet="product_categories" />
+            <End Role="product_category" EntitySet="product_category" />
             <End Role="inventory" EntitySet="inventories" />
           </AssociationSet>
           <EntitySet Name="customer_address" EntityType="eBITModel.customer_address" />
@@ -386,7 +386,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="product_categories">
+          <EntitySetMapping Name="product_category">
             <EntityTypeMapping TypeName="eBITModel.product_category">
               <MappingFragment StoreEntitySet="product_category">
                 <ScalarProperty Name="category_name" ColumnName="category_name" />

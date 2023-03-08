@@ -25,7 +25,7 @@ namespace eBIT_Application
         private async void button_addcategory_Click(object sender, EventArgs e)
         {
             eBITEntities db = new eBITEntities();
-            db.product_categories.Add(product_categoryBindingSource.Current as product_category);
+            db.product_category.Add(product_categoryBindingSource.Current as product_category);
             int result = await db.SaveChangesAsync();
             if (result > 0)
                 MessageBox.Show("Data has been entered successfully");

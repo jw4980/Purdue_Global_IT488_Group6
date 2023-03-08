@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\daish\Source\Repos\Purdue_Global_IT488_Group6\Purdue_Global_IT488_Group6\eBIT Application\eBIT Application\Model1.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\donnr\Source\Repos\Purdue_Global_IT488_Group6-1\eBIT Application\eBIT Application\Model1.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

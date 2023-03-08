@@ -1,0 +1,10 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/eBIT Application/.vs/eBIT Application
+/eBIT Application/eBIT Application/eBIT_log.ldf
+/eBIT Application/eBIT Application/eBIT_log.ldf
+/eBIT Application/eBIT Application/eBIT_log.ldf
+/eBIT Application/eBIT Application/eBIT.mdf
