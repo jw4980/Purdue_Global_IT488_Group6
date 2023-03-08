@@ -27,10 +27,14 @@ namespace eBIT_Customers
             tableAdapterManager.UpdateAll(eBITCustomerDataSet);
 
             // Save the changes to the database.
-            _context.SaveChanges();
+            
+
+            
+            int result = await _context.SaveChanges();
+            if (result > 0)
+                MessageBox.Show("Data has been entered successfully");
 
             customersDataGridView.Refresh();
-           
         }
 
         private void ViewCustomer_Load(object sender, EventArgs e)
