@@ -113,8 +113,8 @@
             // tableAdapterManager
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.customer_addressTableAdapter = null;
-            this.tableAdapterManager.customer_contactTableAdapter = null;
+            //this.tableAdapterManager.customer_addressTableAdapter = null;
+            //this.tableAdapterManager.customer_contactTableAdapter = null;
             this.tableAdapterManager.customersTableAdapter = null;
             this.tableAdapterManager.inventoryTableAdapter = null;
             this.tableAdapterManager.ordersTableAdapter = null;

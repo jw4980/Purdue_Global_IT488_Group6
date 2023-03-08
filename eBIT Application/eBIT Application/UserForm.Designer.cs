@@ -177,7 +177,7 @@
             this.usersBindingSource.DataMember = "users";
             this.usersBindingSource.DataSource = this.eBITDataSet;
             // 
-            // eBITDataSet1
+            // eBITDataSet
             // 
             this.eBITDataSet.DataSetName = "eBITDataSet";
             this.eBITDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;

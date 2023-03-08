@@ -85,6 +85,34 @@ namespace eBIT_Application
             }
         }
 
-        
+        private void categoriesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (ActiveMdiChild != null)
+            {
+                ActiveMdiChild.Close();
+                ViewCategory newMDIChild = new ViewCategory();
+                newMDIChild.MdiParent = this;
+
+                newMDIChild.ClientSize = new System.Drawing.Size(2000, 800);
+                this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+                newMDIChild.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+                newMDIChild.Dock = DockStyle.Fill;
+
+                newMDIChild.Show();
+            }
+            else
+            {
+                ViewCategory newMDIChild = new ViewCategory();
+                newMDIChild.MdiParent = this;
+
+                newMDIChild.ClientSize = new System.Drawing.Size(2000, 800);
+                this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+                newMDIChild.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+                newMDIChild.Dock = DockStyle.Fill;
+
+                newMDIChild.Show();
+            }
+
+        }
     }
 }
