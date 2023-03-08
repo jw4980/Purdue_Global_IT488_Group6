@@ -89,7 +89,7 @@
             // 
             item_quantityLabel.AutoSize = true;
             item_quantityLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            item_quantityLabel.Location = new System.Drawing.Point(312, 154);
+            item_quantityLabel.Location = new System.Drawing.Point(334, 154);
             item_quantityLabel.Name = "item_quantityLabel";
             item_quantityLabel.Size = new System.Drawing.Size(98, 23);
             item_quantityLabel.TabIndex = 11;
@@ -213,9 +213,9 @@
             // 
             this.item_quantityTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.inventoryBindingSource, "item_quantity", true));
             this.item_quantityTextBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.item_quantityTextBox.Location = new System.Drawing.Point(426, 151);
+            this.item_quantityTextBox.Location = new System.Drawing.Point(445, 151);
             this.item_quantityTextBox.Name = "item_quantityTextBox";
-            this.item_quantityTextBox.Size = new System.Drawing.Size(69, 32);
+            this.item_quantityTextBox.Size = new System.Drawing.Size(50, 32);
             this.item_quantityTextBox.TabIndex = 3;
             // 
             // productcategoryBindingSource
@@ -237,11 +237,11 @@
             this.comboBox1.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.inventoryBindingSource, "category_id", true));
             this.comboBox1.DataSource = this.productcategoryBindingSource1;
             this.comboBox1.DisplayMember = "category_name";
-            this.comboBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(129, 151);
+            this.comboBox1.Location = new System.Drawing.Point(129, 153);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(153, 31);
+            this.comboBox1.Size = new System.Drawing.Size(187, 29);
             this.comboBox1.TabIndex = 2;
             this.comboBox1.ValueMember = "category_id";
             // 
