@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="eBITModel2" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="customer">
+    <Key>
+      <PropertyRef Name="customer_id" />
+    </Key>
+    <Property Name="customer_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="first_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="last_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ebay_username" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="address_line_1" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="address_line_2" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="city" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="state" Type="String" MaxLength="2" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="zip" Type="Int32" Nullable="false" />
+    <Property Name="phone" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="orders" Relationship="Self.FK__orders__customer__693CA210" FromRole="customers" ToRole="orders" />
+  </EntityType>
+  <EntityType Name="inventory">
+    <Key>
+      <PropertyRef Name="item_id" />
+    </Key>
+    <Property Name="item_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="item_name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="item_quantity" Type="Int32" Nullable="false" />
+    <Property Name="category_id" Type="Int32" Nullable="false" />
+    <Property Name="list_price" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="item_cost" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="item_image" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="sale_start" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="sale_end" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="product_category" Relationship="Self.FK__inventory__categ__68487DD7" FromRole="inventory" ToRole="product_category" />
+  </EntityType>
+  <EntityType Name="order">
+    <Key>
+      <PropertyRef Name="order_id" />
+    </Key>
+    <Property Name="order_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="customer_id" Type="Int32" Nullable="false" />
+    <Property Name="sale_price" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="order_quantity" Type="Int32" Nullable="false" />
+    <Property Name="tax" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="ship_cost" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="order_total" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="tracking" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="customer" Relationship="Self.FK__orders__customer__693CA210" FromRole="orders" ToRole="customers" />
+  </EntityType>
+  <EntityType Name="product_category">
+    <Key>
+      <PropertyRef Name="category_id" />
+    </Key>
+    <Property Name="category_id" Type="Int32" Nullable="false" />
+    <Property Name="category_name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="category_desc" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="inventories" Relationship="Self.FK__inventory__categ__68487DD7" FromRole="product_category" ToRole="inventory" />
+  </EntityType>
+  <EntityType Name="user">
+    <Key>
+      <PropertyRef Name="user_id" />
+    </Key>
+    <Property Name="user_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="user_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="password" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="first_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="last_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <Association Name="FK__orders__customer__693CA210">
+    <End Role="customers" Type="Self.customer" Multiplicity="1" />
+    <End Role="orders" Type="Self.order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="customers">
+        <PropertyRef Name="customer_id" />
+      </Principal>
+      <Dependent Role="orders">
+        <PropertyRef Name="customer_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__inventory__categ__68487DD7">
+    <End Role="product_category" Type="Self.product_category" Multiplicity="1" />
+    <End Role="inventory" Type="Self.inventory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="product_category">
+        <PropertyRef Name="category_id" />
+      </Principal>
+      <Dependent Role="inventory">
+        <PropertyRef Name="category_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="eBITEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="customers" EntityType="Self.customer" />
+    <EntitySet Name="inventories" EntityType="Self.inventory" />
+    <EntitySet Name="orders" EntityType="Self.order" />
+    <EntitySet Name="product_categories" EntityType="Self.product_category" />
+    <EntitySet Name="users" EntityType="Self.user" />
+    <AssociationSet Name="FK__orders__customer__693CA210" Association="Self.FK__orders__customer__693CA210">
+      <End Role="customers" EntitySet="customers" />
+      <End Role="orders" EntitySet="orders" />
+    </AssociationSet>
+    <AssociationSet Name="FK__inventory__categ__68487DD7" Association="Self.FK__inventory__categ__68487DD7">
+      <End Role="product_category" EntitySet="product_categories" />
+      <End Role="inventory" EntitySet="inventories" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
