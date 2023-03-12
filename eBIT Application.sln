@@ -5,6 +5,8 @@ VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eBIT Application", "eBIT Application\eBIT Application.csproj", "{E83DC5AB-FDEF-4A7A-8B49-C3EFC19420C1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eBIT", "..\..\..\..\source\repos\IT488\eBIT\eBIT.csproj", "{0969F4C6-3BA2-403F-86FF-356C94218D8B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{E83DC5AB-FDEF-4A7A-8B49-C3EFC19420C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E83DC5AB-FDEF-4A7A-8B49-C3EFC19420C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E83DC5AB-FDEF-4A7A-8B49-C3EFC19420C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0969F4C6-3BA2-403F-86FF-356C94218D8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0969F4C6-3BA2-403F-86FF-356C94218D8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0969F4C6-3BA2-403F-86FF-356C94218D8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0969F4C6-3BA2-403F-86FF-356C94218D8B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

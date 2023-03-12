@@ -229,6 +229,8 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comboBox1.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.inventoryBindingSource, "category_id", true));
             this.comboBox1.DataSource = this.productcategoryBindingSource1;
             this.comboBox1.DisplayMember = "category_name";

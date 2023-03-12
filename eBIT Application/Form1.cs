@@ -51,6 +51,9 @@ namespace eBIT_Application
             item_quantityTextBox.Clear();
             item_costTextBox.Clear();
             list_priceTextBox.Clear();
+            comboBox1.Refresh();
+            sale_endDateTimePicker.Refresh();
+            sale_startDateTimePicker.Refresh();
         }
         public void SetMyCustomFormat()
         {
@@ -72,8 +75,8 @@ namespace eBIT_Application
 
         private void sale_endDateTimePicker_ValueChanged(object sender, EventArgs e)
         {
-            sale_startDateTimePicker.Format = DateTimePickerFormat.Custom;
-            sale_startDateTimePicker.CustomFormat = "MM/dd/yyyy";
+            sale_endDateTimePicker.Format = DateTimePickerFormat.Custom;
+            sale_endDateTimePicker.CustomFormat = "MM/dd/yyyy";
         }
 
 

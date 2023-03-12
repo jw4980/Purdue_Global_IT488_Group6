@@ -318,7 +318,7 @@
             // 
             // stateTextBox
             // 
-            this.stateTextBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.stateTextBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.stateTextBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.stateTextBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.customersBindingSource1, "state", true));
             this.stateTextBox.DataSource = this.statesBindingSource;
